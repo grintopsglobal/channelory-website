@@ -1,0 +1,87 @@
+@import 'tailwindcss';
+
+/* Token brand dari mockup. Rasio kontras ada di README (A4). */
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-navy: #13294b;
+  --color-navy-dark: #0d1d36;
+  --color-ink: #0f172a;
+  --color-sky: #00a3e0; /* hanya di atas navy, ikon, garis, titik */
+  --color-sky-hover: #008ec4;
+  --color-sky-text: #0077a8; /* teks sky di atas latar terang, 5,0:1 vs putih */
+  --color-sky-text-hover: #00648d;
+  --color-slate-bg: #f8fafc;
+  /* Tombol CTA: opsi b (A4) = sky mockup + teks navy 5,1:1; hover lebih terang (navy di atas #38BDF8 = 6,8:1). */
+  --color-cta: #00a3e0;
+  --color-cta-hover: #38bdf8;
+  --color-cta-ink: #13294b;
+}
+
+/* Tailwind 4 mengubah warna border default ke currentColor; mockup memakai Tailwind 3 (gray-200). */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: #ffffff;
+  }
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-sky-text);
+    outline-offset: 2px;
+  }
+  .on-dark :focus-visible {
+    outline-color: var(--color-sky);
+  }
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@keyframes floatMac {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes floatAndroid {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float-mac {
+  animation: floatMac 6s ease-in-out infinite;
+}
+.animate-float-android {
+  animation: floatAndroid 5s ease-in-out 1.2s infinite;
+}
+
+.pricing-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-card.iso-hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  display: none;
+}
+.pricing-card.iso-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-mac,
+  .animate-float-android {
+    animation: none;
+  }
+  .pricing-card {
+    transition: none;
+  }
+}

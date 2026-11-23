@@ -1,0 +1,24 @@
+/* Gaya preview Decap CMS: token yang sama dengan src/styles/global.css */
+:root {
+  --navy: #13294b;
+  --sky-text: #0077a8;
+  --ink: #0f172a;
+  --muted: #475569;
+}
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 16px;
+  max-width: 68ch;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h1, h2, h3 {
+  color: var(--navy);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+strong { color: var(--navy); }
+a { color: var(--sky-text); }

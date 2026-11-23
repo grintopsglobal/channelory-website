@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Channelory — Platform Manajemen Afiliasi, Reseller, Agen & Franchise Hybrid</title>
+  <meta name="title" content="Channelory — Platform Manajemen Afiliasi, Reseller, Agen & Franchise Hybrid" />
+  <meta name="description" content="Satukan afiliasi digital, reseller, agen berjenjang, dan jaringan franchise dalam satu platform SaaS. Terintegrasi penuh dengan WooCommerce, Shopify, Odoo, dan ERPNext." />
+  <meta name="keywords" content="software manajemen agen, aplikasi reseller, platform afiliasi indonesia, sistem manajemen franchise, software distributor, integrasi odoo woocommerce shopify, channelory" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Channelory" />
+  <link rel="canonical" href="https://channelory.com/id" />
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://channelory.com/id" />
+  <meta property="og:title" content="Channelory — Unifying partners, optimizing networks." />
+  <meta property="og:description" content="Satu command center untuk mengelola afiliasi online, reseller stokis, agen multi-tier, dan royalti franchise. Terhubung langsung dengan e-commerce dan ERP Anda." />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- JSON-LD Structured Data for SEO (SoftwareApplication & FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Channelory",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Platform SaaS manajemen kemitraan penjualan hybrid untuk afiliasi digital, reseller, agen berjenjang, dan franchise yang terintegrasi dengan WooCommerce, Shopify, Odoo, dan ERPNext.",
+    "slogan": "Unifying partners, optimizing networks.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "IDR",
+      "lowPrice": "799000",
+      "highPrice": "5999000",
+      "offerCount": "4"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS & Typography -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #0F172A;
+      background-color: #FFFFFF;
+    }
+    .font-mono-num {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Offset anchor scroll for fixed header */
+    section[id] {
+      scroll-margin-top: 84px;
+    }
+    /* Dual-device subtle floating animations (out of phase) */
+    @keyframes floatMac {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes floatAndroid {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float-mac {
+      animation: floatMac 6s ease-in-out infinite;
+    }
+    .animate-float-android {
+      animation: floatAndroid 5s ease-in-out 1.2s infinite;
+    }
+    /* Isotope card filtering & price transition */
+    .pricing-card {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pricing-card.iso-hidden {
+      opacity: 0;
+      transform: scale(0.95);
+      pointer-events: none;
+      display: none;
+    }
+    .pricing-card.iso-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#00A3E0] selection:text-white">
+
+  <!-- =====================================================================
+       1. FIXED HEADER (STICKY TOP WITH BACKDROP BLUR & FLAT VECTOR LOGO)
+  ====================================================================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Logo (Flat Vector SVG without gradients) -->
+      <a href="#" class="flex items-center gap-3 focus:outline-none" aria-label="Beranda Channelory">
+        <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Channelory">
+          <path d="M24 4L41 13.8V19.5L35 16V17.2L24 10.9L13 17.2V30.8L24 37.1L35 30.8V28.2L41 31.7V34.2L24 44L7 34.2V13.8L24 4Z" fill="#13294B"/>
+          <path d="M16.5 27.5L21.5 22.5L25 26L33.5 17.5L30.5 14.5H40V24L37 21L25 33L21.5 29.5L18.5 32.5L16.5 27.5Z" fill="#00A3E0"/>
+          <circle cx="22.5" cy="17.5" r="2.2" fill="#13294B"/>
+          <circle cx="35.5" cy="26.5" r="2.2" fill="#00A3E0"/>
+        </svg>
+        <div>
+          <span class="block text-lg font-extrabold tracking-tight text-[#13294B] leading-none">CHANNELORY</span>
+          <span class="block text-[10px] font-semibold tracking-wider text-slate-500 uppercase mt-1">Unifying partners, optimizing networks.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Anchor Navigation -->
+      <nav aria-label="Navigasi Utama" class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#manfaat" class="hover:text-[#00A3E0] transition">Manfaat</a>
+        <a href="#fitur" class="hover:text-[#00A3E0] transition">Fitur</a>
+        <a href="#harga" class="hover:text-[#00A3E0] transition">Harga</a>
+        <a href="#tentang" class="hover:text-[#00A3E0] transition">Tentang</a>
+        <a href="#faq" class="hover:text-[#00A3E0] transition">FAQ</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/6281234567890?text=Halo%20tim%20Channelory%2C%20saya%20ingin%20mencoba%20demo%20dan%20konsultasi%20kebutuhan%20jaringan%20mitra%20bisnis%20saya." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#00A3E0] hover:bg-[#008EC4] text-white text-sm font-bold transition shadow-sm">
+          <span>Coba Sekarang</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button type="button" onclick="toggleMobileNav()" aria-label="Buka Menu Navigasi" class="lg:hidden p-2.5 rounded-lg border border-slate-200 text-[#13294B] hover:bg-slate-50">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2">
+      <a href="#manfaat" onclick="toggleMobileNav()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-[#00A3E0]">Manfaat</a>
+      <a href="#fitur" onclick="toggleMobileNav()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-[#00A3E0]">Fitur</a>
+      <a href="#harga" onclick="toggleMobileNav()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-[#00A3E0]">Harga</a>
+      <a href="#tentang" onclick="toggleMobileNav()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-[#00A3E0]">Tentang</a>
+      <a href="#faq" onclick="toggleMobileNav()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-[#00A3E0]">FAQ</a>
+      <div class="pt-2">
+        <a href="https://wa.me/6281234567890?text=Halo%20tim%20Channelory%2C%20saya%20ingin%20mencoba%20demo%20dan%20konsultasi%20kebutuhan%20jaringan%20mitra%20bisnis%20saya." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#00A3E0] text-white text-sm font-bold">
+          Coba Sekarang via WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- =====================================================================
+         2. HERO SECTION + ANIMATED MACBOOK & ANDROID DUAL-DEVICE SHOWCASE
+    ====================================================================== -->
+    <section class="bg-[#F8FAFC] border-b border-slate-200 py-14 sm:py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          <!-- Left Copy Column -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-slate-200">
+              <span class="w-2 h-2 rounded-full bg-[#00A3E0]"></span>
+              <span class="text-xs font-extrabold tracking-wider text-[#13294B] uppercase">UNIFYING PARTNERS, OPTIMIZING NETWORKS.</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#13294B] tracking-tight leading-[1.15]">
+              Satu Command Center untuk <span class="text-[#00A3E0]">Afiliasi, Reseller, Agen &amp; Franchise</span> Anda.
+            </h1>
+
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Tinggalkan pelacakan afiliasi konvensional yang terbatas pada tautan referral. Channelory menyatukan pemasaran afiliasi digital dengan jaringan distribusi fisik—lengkap dengan hierarki agen berjenjang, kontrol stok, royalti franchise, serta sinkronisasi langsung ke <strong>WooCommerce, Shopify, Odoo, dan ERPNext</strong>.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+              <a href="https://wa.me/6281234567890?text=Halo%20Channelory%2C%20saya%20tertarik%20Coba%20Sekarang%20dan%20jadwalkan%20demo%20platform%20untuk%20bisnis%20saya." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#00A3E0] hover:bg-[#008EC4] text-white text-sm font-bold transition shadow-sm">
+                <span>Coba Sekarang via WhatsApp</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="#harga" class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-[#13294B] text-sm font-bold transition">
+                Lihat Paket Harga
+              </a>
+            </div>
+
+            <!-- Ecosystem Integration Trust Badges -->
+            <div class="pt-4 border-t border-slate-200">
+              <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2.5">Siap Terintegrasi dengan Ekosistem Bisnis Anda:</div>
+              <div class="flex flex-wrap items-center gap-2 text-xs font-bold text-[#13294B]">
+                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">WooCommerce</span>
+                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">Shopify Plus</span>
+                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">Odoo ERP</span>
+                <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">ERPNext</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Animated Dual-Device Mockup (MacBook + Android Smartphone) -->
+          <div class="lg:col-span-7">
+            <!-- Screen View Switcher Controls -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div class="inline-flex items-center gap-1.5 bg-white border border-slate-200 rounded-lg p-1 shadow-xs">
+                <button type="button" onclick="setDeviceScene(0)" id="scene-btn-0" class="px-2.5 py-1 rounded text-[11px] font-bold bg-[#13294B] text-white transition cursor-pointer">
+                  1. Command Center Dashboard
+                </button>
+                <button type="button" onclick="setDeviceScene(1)" id="scene-btn-1" class="px-2.5 py-1 rounded text-[11px] font-semibold text-slate-600 hover:text-[#13294B] transition cursor-pointer">
+                  2. Multi-Tier Agen &amp; Stok
+                </button>
+                <button type="button" onclick="setDeviceScene(2)" id="scene-btn-2" class="px-2.5 py-1 rounded text-[11px] font-semibold text-slate-600 hover:text-[#13294B] transition cursor-pointer">
+                  3. Royalti &amp; Payouts
+                </button>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Auto-Preview Aktif</span>
+              </div>
+            </div>
+
+            <!-- Dual-Device Stage -->
+            <div class="relative pb-10 sm:pb-12 pr-2 sm:pr-6">
+              
+              <!-- MACBOOK PRO HARDWARE FRAME -->
+              <div class="animate-float-mac w-full max-w-[640px] mx-auto lg:mx-0">
+                <!-- Lid / Bezel -->
+                <div class="bg-[#0F172A] rounded-t-2xl p-2 sm:p-2.5 border-2 border-slate-700 shadow-2xl relative">
+                  <!-- MacBook Camera Notch -->
+                  <div class="w-20 h-2.5 bg-[#0F172A] rounded-b-md mx-auto -mt-2.5 mb-1.5 flex items-center justify-center relative z-20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-700 ring-1 ring-slate-600"></span>
+                  </div>
+
+                  <!-- MacBook Screen Viewport (Channelory Web App UI) -->
+                  <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-800 flex min-h-[340px] sm:min-h-[375px] text-left select-none">
+                    
+                    <!-- Left Sidebar (#13294B) matching screenshot -->
+                    <div class="w-32 sm:w-40 bg-[#13294B] text-white flex flex-col shrink-0 p-2.5 justify-between">
+                      <div>
+                        <!-- Sidebar Logo -->
+                        <div class="flex items-center gap-1.5 pb-2.5 border-b border-slate-800">
+                          <svg class="w-5 h-5 shrink-0" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L41 13.8V19.5L35 16V17.2L24 10.9L13 17.2V30.8L24 37.1L35 30.8V28.2L41 31.7V34.2L24 44L7 34.2V13.8L24 4Z" fill="#FFFFFF"/>
+                            <path d="M16.5 27.5L21.5 22.5L25 26L33.5 17.5L30.5 14.5H40V24L37 21L25 33L21.5 29.5L18.5 32.5L16.5 27.5Z" fill="#00A3E0"/>
+                          </svg>
+                          <div>
+                            <div class="text-[9px] font-extrabold tracking-tight leading-none">CHANNELORY</div>
+                            <div class="text-[6.5px] text-sky-300 font-semibold tracking-wider uppercase mt-0.5">COMMAND CENTER</div>
+                          </div>
+                        </div>
+
+                        <!-- Active Entity Box -->
+                        <div class="my-2 px-2 py-1.5 rounded bg-[#0D1D36] border border-slate-700/70">
+                          <div class="text-[6.5px] uppercase text-slate-400 font-semibold">ACTIVE ENTITY</div>
+                          <div class="text-[8px] font-bold text-white truncate">GRINTEC GLOBAL - Main</div>
+                        </div>
+
+                        <!-- 8 Sidebar Modules -->
+                        <div id="mac-sidebar-list" class="space-y-0.5 text-[8.5px]">
+                          <div data-nav="0" class="px-2 py-1.5 rounded bg-[#00A3E0] text-white font-bold flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-white"></span><span>Dashboard</span>
+                          </div>
+                          <div data-nav="1" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Partners</span>
+                          </div>
+                          <div data-nav="2" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Products &amp; Catalog</span>
+                          </div>
+                          <div data-nav="3" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Commission &amp; Rules</span>
+                          </div>
+                          <div data-nav="4" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Orders &amp; Inventory</span>
+                          </div>
+                          <div data-nav="5" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Payouts &amp; Royalties</span>
+                          </div>
+                          <div data-nav="6" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Integrations</span>
+                          </div>
+                          <div data-nav="7" class="px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5">
+                            <span class="w-1 h-1 rounded-full bg-slate-500"></span><span>Settings</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-[7px] text-slate-400">
+                        <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Odoo Synced</span>
+                        <span class="font-mono-num">v2.4</span>
+                      </div>
+                    </div>
+
+                    <!-- Main Web App Content Area -->
+                    <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+                      <!-- Top App Header -->
+                      <div class="h-8 bg-white border-b border-slate-200 px-3 flex items-center justify-between gap-2 shrink-0">
+                        <div class="text-[8px] text-slate-500 truncate">
+                          <span class="font-bold text-[#13294B]">Channelory</span> / <span id="mac-breadcrumb">Dashboard / Ringkasan</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <div class="hidden sm:block px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-[7px] text-slate-400">Quick search...</div>
+                          <div class="w-4 h-4 rounded bg-[#13294B] text-white text-[7px] font-bold flex items-center justify-center">OW</div>
+                        </div>
+                      </div>
+
+                      <!-- Subheader & Tabs -->
+                      <div class="bg-white border-b border-slate-200 px-3 pt-2">
+                        <div class="flex items-center justify-between gap-2">
+                          <div>
+                            <div id="mac-page-title" class="text-xs font-extrabold text-[#13294B] leading-none">Dashboard</div>
+                            <div id="mac-page-sub" class="text-[7.5px] text-slate-500 mt-0.5">Unified partner revenue, multi-tier channel performance &amp; stock.</div>
+                          </div>
+                          <span class="px-2 py-0.5 rounded bg-[#00A3E0] text-white text-[7.5px] font-bold shrink-0">+ Create Partner</span>
+                        </div>
+                        <div class="flex items-center gap-3 mt-2 text-[8px]">
+                          <span class="pb-1 border-b-2 border-[#00A3E0] font-bold text-[#13294B]">Ringkasan / Overview</span>
+                          <span class="pb-1 text-slate-400">Channel Analytics</span>
+                          <span class="pb-1 text-slate-400 hidden sm:inline">Live Activity</span>
+                        </div>
+                      </div>
+
+                      <!-- Dynamic MacBook Body (KPI Cards + Channel Bars + Table) -->
+                      <div id="mac-screen-body" class="p-2.5 sm:p-3 space-y-2.5 flex-1 overflow-hidden transition-opacity duration-300">
+                        <!-- Populated via JS -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MacBook Aluminium Base & Lip -->
+                <div class="relative mx-auto">
+                  <div class="h-3 bg-slate-300 rounded-b-xl border-x border-b border-slate-400 shadow-md flex items-start justify-center">
+                    <div class="w-16 h-1 bg-slate-400 rounded-b"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ANDROID SMARTPHONE FRAME (OVERLAPPING BOTTOM-RIGHT) -->
+              <div class="animate-float-android w-[178px] sm:w-[205px] bg-[#0F172A] rounded-[26px] p-2 border-2 border-slate-700 shadow-2xl absolute -bottom-2 right-0 sm:right-2 z-20 select-none">
+                <!-- Side Hardware Buttons -->
+                <div class="w-0.5 h-6 bg-slate-600 rounded-r absolute -right-[3px] top-16"></div>
+                <div class="w-0.5 h-10 bg-slate-600 rounded-r absolute -right-[3px] top-24"></div>
+
+                <!-- Android Screen Viewport -->
+                <div class="bg-slate-50 rounded-[20px] overflow-hidden border border-slate-800 flex flex-col">
+                  <!-- Status Bar + Punch-Hole Camera -->
+                  <div class="bg-[#13294B] text-white px-3 pt-1.5 pb-2">
+                    <div class="flex items-center justify-between text-[7px] font-mono-num text-slate-300 mb-1.5">
+                      <span>21:05</span>
+                      <span class="w-2 h-2 rounded-full bg-black ring-1 ring-slate-700"></span>
+                      <span>5G &bull; 98%</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <div class="text-[7px] uppercase tracking-wider text-sky-300 font-bold">CHANNELORY PARTNER</div>
+                        <div id="android-partner-name" class="text-[9.5px] font-extrabold text-white truncate">Nadia Kusuma Studio</div>
+                      </div>
+                      <span class="px-1.5 py-0.5 rounded bg-[#00A3E0] text-white text-[7px] font-bold">APP</span>
+                    </div>
+                  </div>
+
+                  <!-- Dynamic Android Partner Mobile Content -->
+                  <div id="android-screen-body" class="p-2.5 space-y-2 text-left transition-opacity duration-300">
+                    <!-- Populated via JS -->
+                  </div>
+
+                  <!-- Bottom Gesture Navigation Pill -->
+                  <div class="py-1.5 bg-white border-t border-slate-200 flex justify-center">
+                    <div class="w-14 h-1 rounded-full bg-slate-300"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. MANFAAT BISNIS (BUSINESS BENEFITS & MEASURABLE IMPACT)
+    ====================================================================== -->
+    <section id="manfaat" class="py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#00A3E0]">Manfaat Bisnis</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#13294B] tracking-tight mt-2">
+            Dirancang untuk Brand &amp; Principal yang Ingin Tumbuh Tanpa Kekacauan Operasional
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+            Mengelola puluhan hingga ribuan mitra penjualan dengan spreadsheet manual memicu salah hitung komisi, kebocoran harga grosir, dan stok yang tidak terlacak. Channelory mengotomatiskan seluruh alur tersebut.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <!-- Benefit 1 -->
+          <article class="p-6 rounded-xl bg-[#F8FAFC] border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-lg bg-[#13294B] text-white flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-[#00A3E0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="font-mono-num text-2xl font-extrabold text-[#00A3E0]">85% Lebih Cepat</div>
+              <h3 class="text-base font-bold text-[#13294B] mt-2">Rekap Komisi &amp; Override Otomatis</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                Hitung komisi CPA afiliasi, selisih margin reseller, hingga bonus override agen Level 1–3 secara instan setiap kali pesanan selesai.
+              </p>
+            </div>
+          </article>
+
+          <!-- Benefit 2 -->
+          <article class="p-6 rounded-xl bg-[#F8FAFC] border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-lg bg-[#13294B] text-white flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-[#00A3E0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              </div>
+              <div class="font-mono-num text-2xl font-extrabold text-[#00A3E0]">100% Terpantau</div>
+              <h3 class="text-base font-bold text-[#13294B] mt-2">Visibilitas Stok di Gudang Mitra</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                Pantau alokasi stok yang dipegang distributor, stokis, dan outlet franchise Anda, lengkap dengan pemesanan ulang (PO restock) terhubung ke ERP.
+              </p>
+            </div>
+          </article>
+
+          <!-- Benefit 3 -->
+          <article class="p-6 rounded-xl bg-[#F8FAFC] border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-lg bg-[#13294B] text-white flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-[#00A3E0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div class="font-mono-num text-2xl font-extrabold text-[#00A3E0]">Zero Kebocoran</div>
+              <h3 class="text-base font-bold text-[#13294B] mt-2">Proteksi Wilayah &amp; Matriks Harga</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                Kunci harga beli grosir dan Minimum Order Quantity (MOQ) sesuai jenjang mitra sehingga tidak terjadi perang harga antar kanal.
+              </p>
+            </div>
+          </article>
+
+          <!-- Benefit 4 -->
+          <article class="p-6 rounded-xl bg-[#F8FAFC] border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-lg bg-[#13294B] text-white flex items-center justify-center mb-5">
+                <svg class="w-5 h-5 text-[#00A3E0]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <div class="font-mono-num text-2xl font-extrabold text-[#00A3E0]">1 Sistem Terpadu</div>
+              <h3 class="text-base font-bold text-[#13294B] mt-2">Siap Ekspansi ke Skema Franchise</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                Mulai dari program afiliasi ringan lalu kembangkan ke keagenan dan waralaba tanpa perlu migrasi ke software terpisah.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. FITUR UTAMA (CORE FEATURES WITH INTERACTIVE MODULE EXPLORER)
+    ====================================================================== -->
+    <section id="fitur" class="py-20 bg-[#F8FAFC] border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#00A3E0]">Fitur Lengkap Enterprise</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#13294B] tracking-tight mt-2">
+            Infrastruktur Lengkap untuk Mengelola Setiap Model Kemitraan Penjualan
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+            Dari atribusi link konten kreator hingga penagihan royalti bulanan outlet franchise, seluruh modul bekerja dalam satu alur data terpusat.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <!-- Feature 1 -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-sky-50 text-[#00A3E0] text-xs font-bold">Modul 01</span>
+              <span class="font-mono-num text-xs text-slate-400">HYBRID CRM</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-[#13294B]">Manajemen Mitra Hybrid &amp; Hierarki</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Kelola empat jenis mitra sekaligus—<strong>Afiliator, Reseller Stokis, Agen Multi-Tier, dan Franchisee</strong>—lengkap dengan pohon jaringan upline/downline dan pembagian teritori wilayah.
+            </p>
+            <ul class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Portal onboarding &amp; KYC mitra mandiri</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Visualisasi struktur jaringan L1, L2, hingga L3</li>
+            </ul>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-sky-50 text-[#00A3E0] text-xs font-bold">Modul 02</span>
+              <span class="font-mono-num text-xs text-slate-400">RULE ENGINE</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-[#13294B]">Mesin Komisi, Override &amp; Royalti</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Atur skema komisi fleksibel: persentase CPA, kupon referral unik, durasi cookie, bonus override berjenjang untuk leader agen, hingga royalti omzet kotor franchise.
+            </p>
+            <ul class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Aturan komisi khusus per kategori atau SKU</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Simulator pembagian komisi real-time</li>
+            </ul>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-sky-50 text-[#00A3E0] text-xs font-bold">Modul 03</span>
+              <span class="font-mono-num text-xs text-slate-400">B2B PRICING</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-[#13294B]">Katalog Produk &amp; Harga Berjenjang</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Sinkronkan katalog SKU master dan terapkan matriks harga beli otomatis berbeda untuk Retail, Reseller, Master Agent, dan Franchise lengkap dengan syarat MOQ.
+            </p>
+            <ul class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Kontrol kelayakan komisi per produk</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Harga paket bundling &amp; suplai B2B</li>
+            </ul>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-sky-50 text-[#00A3E0] text-xs font-bold">Modul 04</span>
+              <span class="font-mono-num text-xs text-slate-400">INVENTORY &amp; PO</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-[#13294B]">Kontrol Stok &amp; Restock Mitra</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Kelola pesanan restock grosir (Purchase Order) dari reseller dan outlet franchise dengan persetujuan satu klik yang langsung memotong stok gudang pusat.
+            </p>
+            <ul class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Pelacakan stok konsinyasi &amp; stok putus</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Notifikasi batas minimum stok mitra</li>
+            </ul>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-sky-50 text-[#00A3E0] text-xs font-bold">Modul 05</span>
+              <span class="font-mono-num text-xs text-slate-400">2-WAY LEDGER</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-[#13294B]">Payout Komisi &amp; Penagihan Royalti</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Buku besar keuangan dua arah: kelola pencairan komisi keluar (outgoing payouts) kepada afiliator/agen sekaligus tagihan royalti masuk (incoming invoices) dari franchisee.
+            </p>
+            <ul class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Rekonsiliasi periode pencairan otomatis</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Ekspor massal pembayaran &amp; bukti potong</li>
+            </ul>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="bg-white border border-slate-200 rounded-xl p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded bg-sky-50 text-[#00A3E0] text-xs font-bold">Modul 06</span>
+              <span class="font-mono-num text-xs text-slate-400">PLUG &amp; PLAY API</span>
+            </div>
+            <h3 class="text-lg font-extrabold text-[#13294B]">Integrasi E-Commerce &amp; ERP Native</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Hubungkan toko online <strong>WooCommerce &amp; Shopify</strong> untuk pelacakan konversi real-time, serta sinkronkan akuntansi dan inventori dengan <strong>Odoo &amp; ERPNext</strong>.
+            </p>
+            <ul class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Plugin resmi &amp; webhook dua arah</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00A3E0]"></span>Kontrol akses tim berbasis RBAC &amp; 2FA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. HARGA (ISOTOPE FILTER: BULANAN, TAHUNAN, ONE-TIME LICENSE + TIER CARDS)
+    ====================================================================== -->
+    <section id="harga" class="py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#00A3E0]">Paket &amp; Harga Transparan</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#13294B] tracking-tight mt-2">
+            Investasi Fleksibel: Langganan SaaS atau Lisensi Sekali Bayar (One-Time)
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3">
+            Gunakan filter di bawah untuk membandingkan biaya langganan bulanan, tahunan, maupun pembelian lisensi permanen <strong>One-Time License</strong> untuk setiap skala jaringan Anda.
+          </p>
+
+          <!-- Primary Isotope Filter Tabs (Billing Model: Bulanan, Tahunan, One-Time License) -->
+          <div class="mt-8 flex flex-col items-center gap-3">
+            <div role="tablist" aria-label="Filter Model Pembayaran" class="inline-flex flex-wrap justify-center items-center gap-1.5 p-1.5 rounded-xl bg-slate-100 border border-slate-200">
+              <button type="button" id="iso-bill-monthly" onclick="setPricingFilter('monthly')" class="px-4 py-2 rounded-lg text-xs font-bold bg-[#13294B] text-white transition cursor-pointer">
+                Bulanan (SaaS)
+              </button>
+              <button type="button" id="iso-bill-annual" onclick="setPricingFilter('annual')" class="px-4 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-[#13294B] transition flex items-center gap-1.5 cursor-pointer">
+                <span>Tahunan</span>
+                <span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-extrabold">Hemat 20%</span>
+              </button>
+              <button type="button" id="iso-bill-onetime" onclick="setPricingFilter('onetime')" class="px-4 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-[#13294B] transition flex items-center gap-1.5 cursor-pointer">
+                <span>One-Time License</span>
+                <span class="px-1.5 py-0.5 rounded bg-sky-100 text-[#13294B] text-[10px] font-extrabold">Sekali Bayar</span>
+              </button>
+            </div>
+
+            <!-- Secondary Isotope Category Filter (Semua Paket, Cloud SaaS, Enterprise & Whitelabel) -->
+            <div aria-label="Filter Kategori Skema" class="inline-flex flex-wrap justify-center items-center gap-2 text-xs">
+              <span class="text-slate-400 font-semibold">Filter Skema:</span>
+              <button type="button" id="iso-cat-all" onclick="setCategoryFilter('all')" class="px-3 py-1 rounded-full bg-sky-50 border border-[#00A3E0] text-[#13294B] font-bold transition cursor-pointer">
+                Semua Paket (4)
+              </button>
+              <button type="button" id="iso-cat-saas" onclick="setCategoryFilter('saas')" class="px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-slate-400 font-semibold transition cursor-pointer">
+                Cloud SaaS Ready
+              </button>
+              <button type="button" id="iso-cat-perpetual" onclick="setCategoryFilter('perpetual')" class="px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-slate-400 font-semibold transition cursor-pointer">
+                Enterprise &amp; Whitelabel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Pricing Cards Grid (Isotope Controlled) -->
+        <div id="pricing-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10 items-stretch">
+          
+          <!-- TIER 1: STARTER -->
+          <div data-category="saas" class="pricing-card iso-visible bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-extrabold text-[#13294B]">Starter</h3>
+                <span class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-600 text-[11px] font-bold">UMKM &amp; D2C</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2">Untuk brand yang baru membangun program afiliasi &amp; reseller dasar.</p>
+              
+              <div class="mt-6 pb-6 border-b border-slate-100">
+                <div class="flex items-baseline gap-1">
+                  <span id="price-starter" class="font-mono-num text-2xl sm:text-3xl font-extrabold text-[#13294B]">Rp 990rb</span>
+                  <span id="unit-starter" class="text-xs text-slate-500">/ bulan</span>
+                </div>
+                <div id="note-starter" class="text-[11px] text-slate-500 mt-1">Ditagih bulanan &bull; Opsi One-Time Rp 14,9jt</div>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-xs text-slate-700">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Hingga <strong>100 Mitra Aktif</strong> (Afiliasi &amp; Reseller)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Pelacakan link referral &amp; kupon promo</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Komisi 1 tingkat (Direct CPA / Margin)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Integrasi WooCommerce atau Shopify</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span id="extra-starter">2 Akun Admin Internal</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a id="cta-starter" href="https://wa.me/6281234567890?text=Halo%20Channelory%2C%20saya%20ingin%20Coba%20Sekarang%20paket%20*Starter%20(Bulanan)*%20untuk%20bisnis%20saya." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-slate-100 hover:bg-[#13294B] text-[#13294B] hover:text-white text-xs font-bold transition">
+                Coba Sekarang — Starter
+              </a>
+            </div>
+          </div>
+
+          <!-- TIER 2: BUSINESS (HIGHLIGHTED POPULAR) -->
+          <div data-category="saas" class="pricing-card iso-visible bg-[#13294B] text-white border-2 border-[#00A3E0] rounded-2xl p-6 flex flex-col justify-between shadow-lg relative">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-extrabold text-white">Business</h3>
+                <span class="px-2.5 py-0.5 rounded bg-[#00A3E0] text-white text-[10px] font-extrabold uppercase tracking-wider">Paling Populer</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">Untuk brand berkembang dengan agen berjenjang &amp; kontrol stok reseller.</p>
+              
+              <div class="mt-6 pb-6 border-b border-slate-700">
+                <div class="flex items-baseline gap-1">
+                  <span id="price-business" class="font-mono-num text-2xl sm:text-3xl font-extrabold text-white">Rp 2,49jt</span>
+                  <span id="unit-business" class="text-xs text-slate-300">/ bulan</span>
+                </div>
+                <div id="note-business" class="text-[11px] text-sky-300 mt-1">Ditagih bulanan &bull; Opsi One-Time Rp 34,9jt</div>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-xs text-slate-200">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Hingga <strong>1.000 Mitra Aktif</strong> (Semua Track)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Hierarki Agen Multi-Tier (L1–L3 Override)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Matriks Harga Grosir, MOQ &amp; Stok Mitra</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Integrasi Odoo / ERPNext + E-Commerce</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span id="extra-business">Custom Domain Portal Mitra (partners.brand.id)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a id="cta-business" href="https://wa.me/6281234567890?text=Halo%20Channelory%2C%20saya%20ingin%20Coba%20Sekarang%20paket%20*Business%20(Bulanan)*%20untuk%20mengelola%20afiliasi%20dan%20agen%20berjenjang." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-[#00A3E0] hover:bg-[#008EC4] text-white text-xs font-bold transition shadow-sm">
+                Coba Sekarang — Business
+              </a>
+            </div>
+          </div>
+
+          <!-- TIER 3: ENTERPRISE -->
+          <div data-category="perpetual" class="pricing-card iso-visible bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-extrabold text-[#13294B]">Enterprise</h3>
+                <span class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-600 text-[11px] font-bold">Multi-Branch</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2">Untuk prinsipal distribusi nasional &amp; jaringan waralaba multi-cabang.</p>
+              
+              <div class="mt-6 pb-6 border-b border-slate-100">
+                <div class="flex items-baseline gap-1">
+                  <span id="price-enterprise" class="font-mono-num text-2xl sm:text-3xl font-extrabold text-[#13294B]">Rp 5,99jt</span>
+                  <span id="unit-enterprise" class="text-xs text-slate-500">/ bulan</span>
+                </div>
+                <div id="note-enterprise" class="text-[11px] text-slate-500 mt-1">Ditagih bulanan &bull; Opsi One-Time Rp 79,0jt</div>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-xs text-slate-700">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span><strong>Mitra &amp; Outlet Tanpa Batas</strong> (Unlimited)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Modul Royalti Franchise &amp; Marketing Fund</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Multi-Entity Workspace &amp; Proteksi Teritori</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>RBAC Granular, Audit Log &amp; Wajib 2FA</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span id="extra-enterprise">Dedicated Account Manager &amp; API Webhook</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a id="cta-enterprise" href="https://wa.me/6281234567890?text=Halo%20Channelory%2C%20saya%20ingin%20Coba%20Sekarang%20paket%20*Enterprise%20(Bulanan)*%20untuk%20distribusi%20dan%20franchise%20perusahaan%20kami." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-slate-100 hover:bg-[#13294B] text-[#13294B] hover:text-white text-xs font-bold transition">
+                Coba Sekarang — Enterprise
+              </a>
+            </div>
+          </div>
+
+          <!-- TIER 4: CUSTOM WHITELABEL -->
+          <div data-category="perpetual" class="pricing-card iso-visible bg-[#F8FAFC] border border-slate-300 rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-extrabold text-[#13294B]">Custom Whitelabel</h3>
+                <span class="px-2.5 py-0.5 rounded bg-sky-100 text-[#13294B] text-[10px] font-extrabold uppercase">100% Brand Anda</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-2">Platform siap pakai dengan identitas merek penuh, server terdedikasi, dan alur kustom.</p>
+              
+              <div class="mt-6 pb-6 border-b border-slate-200">
+                <div class="flex items-baseline gap-1">
+                  <span id="price-whitelabel" class="font-mono-num text-2xl sm:text-3xl font-extrabold text-[#13294B]">Rp 12,5jt</span>
+                  <span id="unit-whitelabel" class="text-xs text-slate-500">/ bulan</span>
+                </div>
+                <div id="note-whitelabel" class="text-[11px] text-slate-500 mt-1">Managed Cloud &bull; Opsi One-Time Mulai Rp 145jt</div>
+              </div>
+
+              <ul class="mt-6 space-y-3 text-xs text-slate-700">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span><strong>Full Whitelabel UI</strong> (Logo, Warna, Domain &amp; Email)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Aplikasi Mobile Mitra (Android/iOS) opsional</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Kustomisasi skema komisi, pajak &amp; e-Wallet payout</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span>Integrasi ERP / POS internal kustom (SAP, Accurate, dll.)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[#00A3E0] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  <span id="extra-whitelabel">Dedicated Cloud Instance &amp; Tim Engineer</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a id="cta-whitelabel" href="https://wa.me/6281234567890?text=Halo%20Channelory%2C%20saya%20ingin%20Coba%20Sekarang%20paket%20*Custom%20Whitelabel%20(Bulanan)*%20untuk%20platform%20kemitraan%20kami." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-[#13294B] hover:bg-[#0D1D36] text-white text-xs font-bold transition">
+                Coba Sekarang — Whitelabel
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. TENTANG CHANNELORY (ABOUT)
+    ====================================================================== -->
+    <section id="tentang" class="py-20 bg-[#F8FAFC] border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-5">
+            <span class="text-xs font-extrabold uppercase tracking-wider text-[#00A3E0]">Tentang Channelory</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#13294B] tracking-tight">
+              Menjembatani Dunia Afiliasi Digital dan Distribusi Fisik dalam Satu Arsitektur Modern
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Banyak platform pelacakan afiliasi global hanya berhenti pada tautan referral digital. Padahal di dunia nyata, pertumbuhan brand modern bertumpu pada kombinasi <strong>konten kreator online, jaringan reseller yang menyetok barang, agen daerah berjenjang, hingga gerai franchise</strong>.
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              <strong>Channelory</strong> dibangun dengan prinsip <em>"Unifying partners, optimizing networks."</em>—memberikan satu pusat kendali bagi pemilik merek dan tim operasional untuk merancang aturan komisi, mengawasi pergerakan inventori, dan menghubungkan data penjualan langsung ke sistem akuntansi maupun ERP perusahaan.
+            </p>
+          </div>
+
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white border border-slate-200 rounded-xl p-6">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Visi Produk</div>
+              <div class="text-lg font-extrabold text-[#13294B] mt-2">Omnichannel Partner Infrastructure</div>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">Menghilangkan sekat antara tim digital marketing (afiliasi) dan tim sales distribusi (agen/franchise).</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-6">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Arsitektur Terbuka</div>
+              <div class="text-lg font-extrabold text-[#13294B] mt-2">Storefront &amp; ERP Native</div>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">Dirancang agar mudah dipasang di WooCommerce/Shopify sekaligus siap terhubung ke Odoo dan ERPNext.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-6">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Keamanan Enterprise</div>
+              <div class="text-lg font-extrabold text-[#13294B] mt-2">RBAC &amp; Audit Trail Lengkap</div>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">Pemisahan hak akses ketat antara tim operasional mitra, bagian gudang, dan tim keuangan pencairan.</p>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-6">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Skalabilitas</div>
+              <div class="text-lg font-extrabold text-[#13294B] mt-2">Dari 10 ke 10.000+ Mitra</div>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">Struktur database hierarki yang tetap responsif menghitung komisi berjenjang secara real-time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. FAQ (FREQUENTLY ASKED QUESTIONS - INTERACTIVE ACCORDION)
+    ====================================================================== -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#00A3E0]">Pertanyaan Umum (FAQ)</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#13294B] tracking-tight mt-2">
+            Hal yang Sering Ditanyakan Sebelum Memulai
+          </h2>
+        </div>
+
+        <div class="mt-10 space-y-3" id="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(0)" class="w-full px-6 py-4 bg-slate-50 hover:bg-slate-100 flex items-center justify-between text-left gap-4 cursor-pointer">
+              <span class="text-sm font-bold text-[#13294B]">Apa bedanya Channelory dibanding software afiliasi seperti Tapfiliate atau Partnero?</span>
+              <svg id="faq-icon-0" class="w-5 h-5 text-[#00A3E0] shrink-0 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="faq-ans-0" class="px-6 py-4 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              Software afiliasi tradisional hanya melacak klik tautan dan kupon referral digital. Channelory mencakup seluruh fitur afiliasi digital tersebut <strong>ditambah</strong> manajemen distribusi fisik: harga grosir bertingkat (MOQ), alokasi stok di gudang reseller, pohon hierarki agen berjenjang (L1–L3 override), hingga pencatatan royalti franchise yang terhubung ke sistem ERP.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(1)" class="w-full px-6 py-4 bg-slate-50 hover:bg-slate-100 flex items-center justify-between text-left gap-4 cursor-pointer">
+              <span class="text-sm font-bold text-[#13294B]">Apakah bisa digunakan jika saat ini kami baru menjalankan program afiliasi saja?</span>
+              <svg id="faq-icon-1" class="w-5 h-5 text-[#00A3E0] shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="faq-ans-1" class="hidden px-6 py-4 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              Sangat bisa. Anda dapat memulai dari paket <strong>Starter</strong> untuk meluncurkan program afiliasi berbasis link dan kupon di WooCommerce atau Shopify. Ketika bisnis Anda mulai merekrut reseller stokis, distributor daerah, atau membuka kemitraan franchise, Anda cukup mengaktifkan modul terkait tanpa perlu memindahkan data mitra ke sistem lain.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(2)" class="w-full px-6 py-4 bg-slate-50 hover:bg-slate-100 flex items-center justify-between text-left gap-4 cursor-pointer">
+              <span class="text-sm font-bold text-[#13294B]">Bagaimana cara kerja integrasi dengan WooCommerce, Shopify, Odoo, dan ERPNext?</span>
+              <svg id="faq-icon-2" class="w-5 h-5 text-[#00A3E0] shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="faq-ans-2" class="hidden px-6 py-4 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              Untuk <strong>WooCommerce dan Shopify</strong>, tersedia plugin/app resmi yang otomatis mencatat atribusi referral, kupon mitra, dan status pembayaran pesanan. Untuk <strong>Odoo dan ERPNext</strong>, Channelory menggunakan konektor API dua arah untuk menyinkronkan master SKU, stok gudang pusat, Purchase Order (PO) restock reseller, serta jurnal tagihan royalti franchise.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden">
+            <button type="button" onclick="toggleFaq(3)" class="w-full px-6 py-4 bg-slate-50 hover:bg-slate-100 flex items-center justify-between text-left gap-4 cursor-pointer">
+              <span class="text-sm font-bold text-[#13294B]">Apa saja yang didapatkan pada paket Custom Whitelabel?</span>
+              <svg id="faq-icon-3" class="w-5 h-5 text-[#00A3E0] shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="faq-ans-3" class="hidden px-6 py-4 bg-white text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+              Pada paket <strong>Custom Whitelabel</strong>, seluruh antarmuka dasbor admin maupun portal mitra menggunakan logo, palet warna, domain penuh, dan notifikasi email perusahaan Anda sendiri tanpa mencantumkan nama Channelory. Paket ini juga mencakup opsi server terdedikasi (private cloud), kustomisasi alur pencairan dana lokal, serta integrasi ERP/POS internal perusahaan Anda.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. FINAL CTA BANNER (WHATSAPP CONVERSION)
+    ====================================================================== -->
+    <section class="py-16 bg-[#13294B] text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <span class="inline-block px-3 py-1 rounded bg-[#00A3E0]/20 text-sky-300 text-xs font-extrabold uppercase tracking-wider">
+          Siap Mengoptimalkan Jaringan Mitra Anda?
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+          Konsultasikan Skema Afiliasi, Reseller, Agen, atau Franchise Anda Bersama Tim Kami
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Dapatkan sesi demo langsung dan rekomendasi struktur komisi yang paling sesuai untuk model bisnis Anda via WhatsApp.
+        </p>
+        <div class="pt-2">
+          <a href="https://wa.me/6281234567890?text=Halo%20tim%20Channelory%2C%20saya%20ingin%20Coba%20Sekarang%20dan%20konsultasi%20implementasi%20Channelory%20untuk%20bisnis%20kami." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[#00A3E0] hover:bg-[#008EC4] text-white text-base font-extrabold transition shadow-lg">
+            <span>Coba Sekarang via WhatsApp</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       FOOTER
+  ====================================================================== -->
+  <footer class="bg-[#0D1D36] text-slate-400 border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4L41 13.8V19.5L35 16V17.2L24 10.9L13 17.2V30.8L24 37.1L35 30.8V28.2L41 31.7V34.2L24 44L7 34.2V13.8L24 4Z" fill="#FFFFFF"/>
+              <path d="M16.5 27.5L21.5 22.5L25 26L33.5 17.5L30.5 14.5H40V24L37 21L25 33L21.5 29.5L18.5 32.5L16.5 27.5Z" fill="#00A3E0"/>
+            </svg>
+            <span class="text-base font-extrabold tracking-tight text-white">CHANNELORY</span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Unifying partners, optimizing networks. Platform manajemen kemitraan penjualan hybrid untuk afiliasi digital, reseller stokis, agen berjenjang, dan franchise.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Navigasi</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#manfaat" class="hover:text-white transition">Manfaat Bisnis</a></li>
+            <li><a href="#fitur" class="hover:text-white transition">Fitur Platform</a></li>
+            <li><a href="#harga" class="hover:text-white transition">Paket &amp; Harga</a></li>
+            <li><a href="#tentang" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Integrasi &amp; Kontak</h4>
+          <ul class="space-y-2 text-xs">
+            <li>WooCommerce &amp; Shopify</li>
+            <li>Odoo &amp; ERPNext Connector</li>
+            <li class="pt-1">
+              <a href="https://wa.me/6281234567890?text=Halo%20Channelory%2C%20saya%20ingin%20bertanya%20seputar%20platform%20Channelory." target="_blank" rel="noopener noreferrer" class="text-[#00A3E0] font-bold hover:underline">
+                Hubungi WhatsApp Sales &rarr;
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <div>&copy; 2026 Channelory. Hak Cipta Dilindungi Undang-Undang.</div>
+        <div>Unifying partners, optimizing networks.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       FLOATING WHATSAPP BUTTON (BOTTOM RIGHT)
+  ====================================================================== -->
+  <a href="https://wa.me/6281234567890?text=Halo%20tim%20Channelory%2C%20saya%20ingin%20Coba%20Sekarang%20dan%20tanya%20informasi%20lebih%20lanjut." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp dengan Tim Channelory" class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-lg transition">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+    <span class="hidden sm:inline">Coba Sekarang (WA)</span>
+  </a>
+
+  <!-- =====================================================================
+       INTERACTIVE LANDING PAGE SCRIPTS
+  ====================================================================== -->
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('hidden');
+    }
+
+    // =========================================================================
+    // DUAL-DEVICE HERO SHOWCASE (MACBOOK + ANDROID ANIMATED SCENES)
+    // =========================================================================
+    const deviceScenes = [
+      {
+        navIndex: 0,
+        breadcrumb: 'Dashboard / Ringkasan',
+        title: 'Dashboard',
+        sub: 'Unified partner revenue, multi-tier channel performance, and stock distribution.',
+        macHtml: `
+          <div class="grid grid-cols-4 gap-1.5">
+            <div class="bg-white border border-slate-200 rounded-md p-2">
+              <div class="flex items-center justify-between text-[6.5px] font-bold text-slate-400">
+                <span>REVENUE</span>
+                <span class="px-1 rounded bg-emerald-50 text-emerald-700">+18.4%</span>
+              </div>
+              <div class="font-mono-num text-[11px] font-extrabold text-[#13294B] mt-1">$148,920</div>
+              <div class="text-[6px] text-slate-400 truncate">Digital &amp; physical</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-md p-2">
+              <div class="flex items-center justify-between text-[6.5px] font-bold text-slate-400">
+                <span>PARTNERS</span>
+                <span class="px-1 rounded bg-sky-50 text-[#00A3E0]">4 Tracks</span>
+              </div>
+              <div class="font-mono-num text-[11px] font-extrabold text-[#13294B] mt-1">342</div>
+              <div class="text-[6px] text-slate-400 truncate">184 Aff &bull; 76 Agt</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-md p-2">
+              <div class="flex items-center justify-between text-[6.5px] font-bold text-slate-400">
+                <span>PAYOUTS</span>
+                <span class="px-1 rounded bg-amber-50 text-amber-700">2-Way</span>
+              </div>
+              <div class="font-mono-num text-[11px] font-extrabold text-[#13294B] mt-1">$18,450</div>
+              <div class="text-[6px] text-slate-400 truncate">$14.3k Out &bull; $4.1k In</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-md p-2">
+              <div class="flex items-center justify-between text-[6.5px] font-bold text-slate-400">
+                <span>STOCK HELD</span>
+                <span class="px-1 rounded bg-slate-100 text-[#13294B]">Odoo</span>
+              </div>
+              <div class="font-mono-num text-[11px] font-extrabold text-[#13294B] mt-1">$64,200</div>
+              <div class="text-[6px] text-slate-400 truncate">82 partner hubs</div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-md p-2.5 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[8.5px] font-bold text-[#13294B]">Channel Revenue Comparison</span>
+              <span class="px-1.5 py-0.5 rounded bg-[#13294B] text-white text-[6.5px] font-bold">30D</span>
+            </div>
+            <div class="space-y-1.5 text-[7px]">
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 mb-0.5"><span>Affiliates (184 active)</span><span class="font-mono-num font-bold">$38,400</span></div>
+                <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-[#00A3E0] rounded-full transition-all duration-700" style="width: 72%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 mb-0.5"><span>Multi-Tier Agents (76 active)</span><span class="font-mono-num font-bold">$49,200</span></div>
+                <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-[#00A3E0] rounded-full transition-all duration-700" style="width: 94%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 mb-0.5"><span>Stockist Resellers (58 active)</span><span class="font-mono-num font-bold">$27,820</span></div>
+                <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-[#00A3E0] rounded-full transition-all duration-700" style="width: 55%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 mb-0.5"><span>Franchises (24 outlets)</span><span class="font-mono-num font-bold">$33,500</span></div>
+                <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-[#00A3E0] rounded-full transition-all duration-700" style="width: 65%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-md p-2">
+            <div class="text-[8px] font-bold text-[#13294B] mb-1">Top Performing Partners</div>
+            <div class="flex items-center justify-between text-[7px] py-1 border-t border-slate-100">
+              <div><span class="font-bold text-[#13294B]">Nadia Kusuma Studio</span> <span class="px-1 rounded bg-sky-50 text-[#00A3E0] font-bold">Affiliate</span></div>
+              <span class="font-mono-num font-bold text-[#13294B]">$18,450</span>
+            </div>
+            <div class="flex items-center justify-between text-[7px] py-1 border-t border-slate-100">
+              <div><span class="font-bold text-[#13294B]">PT Nusantara Distribusi</span> <span class="px-1 rounded bg-sky-50 text-[#00A3E0] font-bold">L1 Agent</span></div>
+              <span class="font-mono-num font-bold text-[#13294B]">$34,200</span>
+            </div>
+          </div>
+        `,
+        androidPartner: 'Nadia Kusuma Studio',
+        androidHtml: `
+          <div class="bg-[#13294B] text-white rounded-xl p-2.5">
+            <div class="text-[7px] text-slate-300 font-semibold">Komisi Siap Cair (15% CPA)</div>
+            <div class="font-mono-num text-sm font-extrabold text-[#00A3E0] mt-0.5">Rp 14.850.000</div>
+            <div class="mt-1.5 flex items-center justify-between text-[7px] text-emerald-300 font-bold">
+              <span>+Rp 810rb hari ini</span>
+              <span class="px-1.5 py-0.5 rounded bg-white/10 text-white">Tarik Dana</span>
+            </div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1">
+            <div class="text-[7px] font-bold text-slate-500 uppercase">Link Referral &amp; Kupon</div>
+            <div class="px-2 py-1 rounded bg-slate-100 font-mono-num text-[7.5px] font-bold text-[#13294B] truncate">channelory.link/nadia15</div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1 text-[7.5px]">
+            <div class="font-bold text-[#13294B]">Konversi Terbaru (Shopify)</div>
+            <div class="flex justify-between text-slate-600"><span>Order #8841 (3x Oud)</span><span class="font-mono-num font-bold text-emerald-600">+Rp 810rb</span></div>
+            <div class="flex justify-between text-slate-600"><span>Order #8836 (2x Elixir)</span><span class="font-mono-num font-bold text-emerald-600">+Rp 382rb</span></div>
+          </div>
+        `
+      },
+      {
+        navIndex: 1,
+        breadcrumb: 'Partners / Multi-Tier Network',
+        title: 'Partners & Hierarchy',
+        sub: 'Nested L1–L3 agent trees, territory locks, and reseller stock allocation.',
+        macHtml: `
+          <div class="bg-white border border-slate-200 rounded-md p-2.5 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[8.5px] font-bold text-[#13294B]">Struktur Hierarki Agen Berjenjang (L1 &rarr; L2 &rarr; L3)</span>
+              <span class="px-1.5 py-0.5 rounded bg-sky-50 text-[#00A3E0] text-[6.5px] font-bold">Odoo Live Stock</span>
+            </div>
+            <div class="p-2 rounded bg-[#13294B] text-white flex justify-between items-center text-[7.5px]">
+              <span class="font-bold">HQ: GRINTEC GLOBAL (Pusat)</span>
+              <span class="font-mono-num text-sky-300">1,420 Unit Ready</span>
+            </div>
+            <div class="pl-3 border-l-2 border-[#00A3E0] space-y-1.5 text-[7.5px]">
+              <div class="p-2 rounded bg-slate-50 border border-slate-200 flex justify-between items-center">
+                <div><span class="px-1 rounded bg-sky-100 text-[#00A3E0] font-bold">L1 MASTER</span> <strong class="text-[#13294B]">PT Nusantara Distribusi</strong></div>
+                <span class="font-mono-num font-bold text-[#13294B]">Stok: $22,400</span>
+              </div>
+              <div class="pl-3 border-l border-slate-300 space-y-1">
+                <div class="p-1.5 rounded bg-white border border-slate-200 flex justify-between items-center">
+                  <div><span class="px-1 rounded bg-slate-200 text-slate-700 font-bold">L2 AGEN</span> <strong class="text-[#13294B]">Dimas Saputra Network</strong></div>
+                  <span class="font-mono-num text-emerald-700 font-bold">5% L1 Override</span>
+                </div>
+                <div class="p-1.5 rounded bg-white border border-slate-200 flex justify-between items-center">
+                  <div><span class="px-1 rounded bg-emerald-50 text-emerald-700 font-bold">STOKIS</span> <strong class="text-[#13294B]">Aurelia Beauty Hub</strong></div>
+                  <span class="font-mono-num text-slate-600 font-bold">Stok: $14,800</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-[7.5px]">
+            <div class="bg-white border border-slate-200 rounded-md p-2">
+              <div class="text-slate-400 font-bold uppercase text-[6.5px]">Restock PO Menunggu</div>
+              <div class="font-bold text-[#13294B] mt-0.5">PO-4492 &bull; 120x Botanical Elixir</div>
+              <div class="text-[#00A3E0] font-mono-num font-bold mt-0.5">$6,240 (Harga Tier L1)</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-md p-2">
+              <div class="text-slate-400 font-bold uppercase text-[6.5px]">Proteksi Teritori Aktif</div>
+              <div class="font-bold text-[#13294B] mt-0.5">Jawa Barat &amp; Jabodetabek</div>
+              <div class="text-emerald-600 font-bold mt-0.5">Zero Conflict Verified</div>
+            </div>
+          </div>
+        `,
+        androidPartner: 'PT Nusantara Distribusi (L1)',
+        androidHtml: `
+          <div class="bg-[#13294B] text-white rounded-xl p-2.5">
+            <div class="text-[7px] text-slate-300 font-semibold">Nilai Stok Gudang Agen</div>
+            <div class="font-mono-num text-sm font-extrabold text-white mt-0.5">340 Unit SKU</div>
+            <div class="mt-1.5 flex items-center justify-between text-[7px] text-sky-300 font-bold">
+              <span>Bonus Override: Rp 9,4jt</span>
+              <span class="px-1.5 py-0.5 rounded bg-[#00A3E0] text-white">+ PO Restock</span>
+            </div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1 text-[7.5px]">
+            <div class="font-bold text-[#13294B]">Performa Downline (14 Agen)</div>
+            <div class="flex justify-between text-slate-600"><span>Dimas Saputra (L2)</span><span class="font-mono-num font-bold text-[#00A3E0]">+Rp 1,8jt</span></div>
+            <div class="flex justify-between text-slate-600"><span>Aurelia Hub (Stokis)</span><span class="font-mono-num font-bold text-[#00A3E0]">+Rp 1,2jt</span></div>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-2 text-[7px] text-emerald-800 font-bold">
+            Harga Grosir L1 Aktif (Diskon 38% MSRP)
+          </div>
+        `
+      },
+      {
+        navIndex: 5,
+        breadcrumb: 'Payouts & Royalties / Ledger',
+        title: 'Payouts & Royalties',
+        sub: 'Two-way ledger for outgoing partner commissions and incoming franchise royalties.',
+        macHtml: `
+          <div class="grid grid-cols-2 gap-2">
+            <div class="bg-white border border-slate-200 rounded-md p-2.5">
+              <div class="text-[6.5px] font-bold uppercase text-slate-400">OUTGOING COMMISSIONS</div>
+              <div class="font-mono-num text-xs font-extrabold text-[#13294B] mt-0.5">$14,330.00</div>
+              <div class="text-[7px] text-[#00A3E0] font-semibold mt-0.5">Batch Siap Cair (Bank &amp; Wise)</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-md p-2.5">
+              <div class="text-[6.5px] font-bold uppercase text-slate-400">INCOMING FRANCHISE ROYALTY</div>
+              <div class="font-mono-num text-xs font-extrabold text-emerald-700 mt-0.5">$4,120.00</div>
+              <div class="text-[7px] text-emerald-600 font-semibold mt-0.5">6% Gross POS + 1.5% Marketing</div>
+            </div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-md p-2.5 space-y-1.5 text-[7.5px]">
+            <div class="font-bold text-[#13294B]">Buku Besar Penyelesaian Dua Arah</div>
+            <div class="flex items-center justify-between py-1 border-t border-slate-100">
+              <div><strong class="text-[#13294B]">PAY-309</strong> &bull; PT Nusantara Distribusi</div>
+              <span class="px-1.5 py-0.5 rounded bg-sky-50 text-[#00A3E0] font-mono-num font-bold">Out: $6,840</span>
+            </div>
+            <div class="flex items-center justify-between py-1 border-t border-slate-100">
+              <div><strong class="text-[#13294B]">ROY-114</strong> &bull; Scentanica Flagship Kemang</div>
+              <span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono-num font-bold">In: $4,120 (Paid)</span>
+            </div>
+            <div class="flex items-center justify-between py-1 border-t border-slate-100">
+              <div><strong class="text-[#13294B]">PAY-308</strong> &bull; Nadia Kusuma Studio</div>
+              <span class="px-1.5 py-0.5 rounded bg-sky-50 text-[#00A3E0] font-mono-num font-bold">Out: $2,767</span>
+            </div>
+          </div>
+        `,
+        androidPartner: 'Flagship Kemang (Franchise)',
+        androidHtml: `
+          <div class="bg-[#13294B] text-white rounded-xl p-2.5">
+            <div class="text-[7px] text-slate-300 font-semibold">Omzet POS Gerai Bulan Ini</div>
+            <div class="font-mono-num text-sm font-extrabold text-white mt-0.5">Rp 286.000.000</div>
+            <div class="mt-1.5 flex items-center justify-between text-[7px] text-emerald-300 font-bold">
+              <span>Royalti 6%: Lunas</span>
+              <span class="px-1.5 py-0.5 rounded bg-white/10 text-white">Invoice PDF</span>
+            </div>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1 text-[7.5px]">
+            <div class="font-bold text-[#13294B]">Rincian Tagihan Otomatis</div>
+            <div class="flex justify-between text-slate-600"><span>Royalti Brand (6%)</span><span class="font-mono-num font-bold text-[#13294B]">Rp 17,16jt</span></div>
+            <div class="flex justify-between text-slate-600"><span>Marketing Fund (1.5%)</span><span class="font-mono-num font-bold text-[#13294B]">Rp 4,29jt</span></div>
+          </div>
+          <div class="bg-sky-50 border border-sky-200 rounded-lg p-2 text-[7px] text-[#13294B] font-bold">
+            Odoo POS Terhubung Real-Time
+          </div>
+        `
+      }
+    ];
+
+    let activeSceneIndex = 0;
+    let sceneAutoTimer = null;
+
+    function setDeviceScene(idx, stopAuto = true) {
+      activeSceneIndex = idx;
+      if (stopAuto && sceneAutoTimer) {
+        clearInterval(sceneAutoTimer);
+        sceneAutoTimer = null;
+      }
+
+      // Update top switcher buttons
+      [0, 1, 2].forEach((i) => {
+        const btn = document.getElementById('scene-btn-' + i);
+        if (!btn) return;
+        btn.className = i === idx
+          ? 'px-2.5 py-1 rounded text-[11px] font-bold bg-[#13294B] text-white transition cursor-pointer'
+          : 'px-2.5 py-1 rounded text-[11px] font-semibold text-slate-600 hover:text-[#13294B] transition cursor-pointer';
+      });
+
+      const scene = deviceScenes[idx];
+
+      // Update sidebar highlight in MacBook screen
+      document.querySelectorAll('#mac-sidebar-list [data-nav]').forEach((el) => {
+        const navIdx = Number(el.getAttribute('data-nav'));
+        if (navIdx === scene.navIndex) {
+          el.className = 'px-2 py-1.5 rounded bg-[#00A3E0] text-white font-bold flex items-center gap-1.5';
+        } else {
+          el.className = 'px-2 py-1 rounded text-slate-300 font-medium flex items-center gap-1.5';
+        }
+      });
+
+      // Smooth fade swap for MacBook and Android contents
+      const macBody = document.getElementById('mac-screen-body');
+      const androidBody = document.getElementById('android-screen-body');
+      macBody.style.opacity = '0.35';
+      androidBody.style.opacity = '0.35';
+
+      setTimeout(() => {
+        document.getElementById('mac-breadcrumb').textContent = scene.breadcrumb;
+        document.getElementById('mac-page-title').textContent = scene.title;
+        document.getElementById('mac-page-sub').textContent = scene.sub;
+        macBody.innerHTML = scene.macHtml;
+
+        document.getElementById('android-partner-name').textContent = scene.androidPartner;
+        androidBody.innerHTML = scene.androidHtml;
+
+        macBody.style.opacity = '1';
+        androidBody.style.opacity = '1';
+      }, 150);
+    }
+
+    // =========================================================================
+    // PRICING ISOTOPE FILTER (BULANAN, TAHUNAN, ONE-TIME LICENSE + CATEGORY)
+    // =========================================================================
+    let currentBillingMode = 'monthly';
+    let currentCategoryMode = 'all';
+
+    const pricingMatrixData = {
+      monthly: {
+        label: 'Bulanan (SaaS)',
+        starter: {
+          price: 'Rp 990rb',
+          unit: '/ bulan',
+          note: 'Ditagih bulanan • Opsi One-Time Rp 14,9jt',
+          extra: '2 Akun Admin Internal',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Starter (Bulanan - Rp 990rb/bln)* untuk bisnis saya.'
+        },
+        business: {
+          price: 'Rp 2,49jt',
+          unit: '/ bulan',
+          note: 'Ditagih bulanan • Opsi One-Time Rp 34,9jt',
+          extra: 'Custom Domain Portal Mitra (partners.brand.id)',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Business (Bulanan - Rp 2,49jt/bln)* untuk bisnis saya.'
+        },
+        enterprise: {
+          price: 'Rp 5,99jt',
+          unit: '/ bulan',
+          note: 'Ditagih bulanan • Opsi One-Time Rp 79,0jt',
+          extra: 'Dedicated Account Manager & API Webhook',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Enterprise (Bulanan - Rp 5,99jt/bln)* untuk perusahaan kami.'
+        },
+        whitelabel: {
+          price: 'Rp 12,5jt',
+          unit: '/ bulan',
+          note: 'Managed Cloud • Opsi One-Time Mulai Rp 145jt',
+          extra: 'Dedicated Cloud Instance & Tim Engineer',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Custom Whitelabel (Managed Bulanan)* untuk perusahaan kami.'
+        }
+      },
+      annual: {
+        label: 'Tahunan (Hemat 20%)',
+        starter: {
+          price: 'Rp 792rb',
+          unit: '/ bulan',
+          note: 'Ditagih Rp 9,5jt/tahun (Hemat Rp 2,37jt)',
+          extra: '2 Akun Admin Internal + Gratis Setup',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Starter (Tahunan - Hemat 20%)* untuk bisnis saya.'
+        },
+        business: {
+          price: 'Rp 1,99jt',
+          unit: '/ bulan',
+          note: 'Ditagih Rp 23,9jt/tahun (Hemat Rp 5,97jt)',
+          extra: 'Custom Domain Portal Mitra + Priority Onboarding',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Business (Tahunan - Hemat 20%)* untuk bisnis saya.'
+        },
+        enterprise: {
+          price: 'Rp 4,79jt',
+          unit: '/ bulan',
+          note: 'Ditagih Rp 57,5jt/tahun (Hemat Rp 14,3jt)',
+          extra: 'Dedicated Account Manager & SLA 99.9%',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Enterprise (Tahunan - Hemat 20%)* untuk perusahaan kami.'
+        },
+        whitelabel: {
+          price: 'Rp 10,0jt',
+          unit: '/ bulan',
+          note: 'Ditagih Rp 120jt/tahun (Hemat Rp 30jt)',
+          extra: 'Dedicated Cloud Instance & Custom Domain Penuh',
+          wa: 'Halo Channelory, saya ingin Coba Sekarang paket *Custom Whitelabel (Tahunan - Hemat 20%)* untuk perusahaan kami.'
+        }
+      },
+      onetime: {
+        label: 'One-Time License (Sekali Bayar)',
+        starter: {
+          price: 'Rp 14,9jt',
+          unit: 'sekali bayar',
+          note: 'Lisensi Permanen (Perpetual) • Update & Support 1 Tahun',
+          extra: 'Self-Hosted / Private Cloud Deployment + Lisensi Seumur Hidup',
+          wa: 'Halo Channelory, saya tertarik membeli *One-Time License (Sekali Bayar - Rp 14,9jt)* paket *Starter*.'
+        },
+        business: {
+          price: 'Rp 34,9jt',
+          unit: 'sekali bayar',
+          note: 'Lisensi Permanen (Perpetual) • Update & Support 1 Tahun',
+          extra: 'Full Database Ownership + Integrasi ERP/E-Commerce Permanen',
+          wa: 'Halo Channelory, saya tertarik membeli *One-Time License (Sekali Bayar - Rp 34,9jt)* paket *Business*.'
+        },
+        enterprise: {
+          price: 'Rp 79,0jt',
+          unit: 'sekali bayar',
+          note: 'Lisensi Permanen Multi-Branch • Update & Support 1 Tahun',
+          extra: 'On-Premise / VPC Deployment + Unlimited Mitra Seumur Hidup',
+          wa: 'Halo Channelory, saya tertarik membeli *One-Time License (Sekali Bayar - Rp 79,0jt)* paket *Enterprise*.'
+        },
+        whitelabel: {
+          price: 'Rp 145jt',
+          unit: 'sekali bayar',
+          note: 'Full Whitelabel & Source Deployment • Update 1 Tahun',
+          extra: '100% Hak Kepemilikan Brand, Custom Source & Tim Implementasi',
+          wa: 'Halo Channelory, saya tertarik konsultasi *One-Time License (Sekali Bayar - Mulai Rp 145jt)* paket *Custom Whitelabel*.'
+        }
+      }
+    };
+
+    function setPricingFilter(mode) {
+      currentBillingMode = mode;
+
+      // Update primary Isotope tab styles
+      ['monthly', 'annual', 'onetime'].forEach((m) => {
+        const btn = document.getElementById('iso-bill-' + m);
+        if (!btn) return;
+        if (m === mode) {
+          btn.className = 'px-4 py-2 rounded-lg text-xs font-bold bg-[#13294B] text-white transition flex items-center gap-1.5 cursor-pointer';
+        } else {
+          btn.className = 'px-4 py-2 rounded-lg text-xs font-bold text-slate-600 hover:text-[#13294B] transition flex items-center gap-1.5 cursor-pointer';
+        }
+      });
+
+      const tiers = ['starter', 'business', 'enterprise', 'whitelabel'];
+      const activeData = pricingMatrixData[mode];
+
+      tiers.forEach((t) => {
+        const info = activeData[t];
+        document.getElementById('price-' + t).textContent = info.price;
+        document.getElementById('unit-' + t).textContent = info.unit;
+        document.getElementById('note-' + t).textContent = info.note;
+        document.getElementById('extra-' + t).textContent = info.extra;
+
+        const cta = document.getElementById('cta-' + t);
+        if (cta) {
+          cta.href = 'https://wa.me/6281234567890?text=' + encodeURIComponent(info.wa);
+        }
+      });
+
+      animateIsotopeCards();
+    }
+
+    function setCategoryFilter(cat) {
+      currentCategoryMode = cat;
+
+      ['all', 'saas', 'perpetual'].forEach((c) => {
+        const btn = document.getElementById('iso-cat-' + c);
+        if (!btn) return;
+        if (c === cat) {
+          btn.className = 'px-3 py-1 rounded-full bg-sky-50 border border-[#00A3E0] text-[#13294B] font-bold transition cursor-pointer';
+        } else {
+          btn.className = 'px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 hover:border-slate-400 font-semibold transition cursor-pointer';
+        }
+      });
+
+      animateIsotopeCards();
+    }
+
+    function animateIsotopeCards() {
+      const cards = document.querySelectorAll('#pricing-grid .pricing-card');
+      cards.forEach((card) => {
+        const cardCat = card.getAttribute('data-category');
+        const shouldShow = currentCategoryMode === 'all' || cardCat === currentCategoryMode;
+
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.96)';
+
+        setTimeout(() => {
+          if (shouldShow) {
+            card.classList.remove('iso-hidden');
+            card.classList.add('iso-visible');
+            requestAnimationFrame(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            });
+          } else {
+            card.classList.remove('iso-visible');
+            card.classList.add('iso-hidden');
+          }
+        }, 140);
+      });
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(index) {
+      const ans = document.getElementById('faq-ans-' + index);
+      const icon = document.getElementById('faq-icon-' + index);
+      const isHidden = ans.classList.contains('hidden');
+      if (isHidden) {
+        ans.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // Initialize interactive hero devices & auto-cycle on load
+    window.addEventListener('DOMContentLoaded', () => {
+      setDeviceScene(0, false);
+      sceneAutoTimer = setInterval(() => {
+        const nextIdx = (activeSceneIndex + 1) % deviceScenes.length;
+        setDeviceScene(nextIdx, false);
+      }, 4500);
+    });
+  </script>
+</body>
+</html>

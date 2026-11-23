@@ -1,0 +1,4 @@
+order: 3
+terbuka: false
+pertanyaan: Bagaimana cara kerja integrasi dengan WooCommerce, Shopify, Odoo, dan ERPNext?
+jawaban: Untuk **WooCommerce dan Shopify**, tersedia plugin/app resmi yang otomatis mencatat atribusi referral, kupon mitra, dan status pembayaran pesanan. Untuk **Odoo dan ERPNext**, Channelory menggunakan konektor API dua arah untuk menyinkronkan master SKU, stok gudang pusat, Purchase Order (PO) restock reseller, serta jurnal tagihan royalti franchise.

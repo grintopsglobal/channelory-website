@@ -1,0 +1,35 @@
+key: starter
+order: 1
+nama: Starter
+badge: UMKM & D2C
+gaya: standar
+kategori: saas
+deskripsi: Untuk brand yang baru membangun program afiliasi & reseller dasar.
+fitur:
+  - Hingga **100 Mitra Aktif** (Afiliasi & Reseller)
+  - Pelacakan link referral & kupon promo
+  - Komisi 1 tingkat (Direct CPA / Margin)
+  - Integrasi WooCommerce atau Shopify
+cta: "Coba Sekarang: Starter"
+mode:
+  bulanan:
+    harga: Rp 990rb
+    hargaAngka: 990000
+    satuan: / bulan
+    catatan: Ditagih bulanan • Opsi One-Time Rp 14,9jt
+    fiturTambahan: 2 Akun Admin Internal
+    pesanWa: Saya ingin Coba Sekarang paket *Starter (Bulanan - Rp 990rb/bln)* untuk bisnis saya.
+  tahunan:
+    harga: Rp 792rb
+    hargaAngka: 792000
+    satuan: / bulan
+    catatan: Ditagih Rp 9,5jt/tahun (Hemat Rp 2,37jt)
+    fiturTambahan: 2 Akun Admin Internal + Gratis Setup
+    pesanWa: Saya ingin Coba Sekarang paket *Starter (Tahunan - Hemat 20%)* untuk bisnis saya.
+  sekaliBayar:
+    harga: Rp 14,9jt
+    hargaAngka: 14900000
+    satuan: sekali bayar
+    catatan: Lisensi Permanen (Perpetual) • Update & Support 1 Tahun
+    fiturTambahan: Self-Hosted / Private Cloud Deployment + Lisensi Seumur Hidup
+    pesanWa: Saya ingin membeli *One-Time License (Sekali Bayar - Rp 14,9jt)* paket *Starter*.

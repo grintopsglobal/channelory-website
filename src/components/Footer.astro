@@ -1,0 +1,59 @@
+---
+import Logo from './Logo.astro';
+import { localizePath, useTranslations } from '../i18n/utils';
+import { waLink } from '../lib/wa';
+import type { Home, Settings } from '../lib/content';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  beranda: boolean;
+  home: Home;
+  settings: Settings;
+}
+const { lang, beranda, home, settings } = Astro.props;
+const t = useTranslations(lang);
+const href = (anchor: string) => (beranda ? `#${anchor}` : localizePath(lang, `/#${anchor}`));
+const f = settings.footer;
+---
+
+<footer class="on-dark bg-navy-dark text-slate-400 border-t border-slate-800 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+      <div class="md:col-span-2 space-y-3">
+        <div class="flex items-center gap-2.5">
+          <Logo varian="gelap" class="w-8 h-8" />
+          <span class="text-base font-extrabold tracking-tight text-white">CHANNELORY</span>
+        </div>
+        <p class="text-xs text-slate-400 max-w-sm leading-relaxed">{f.deskripsi}</p>
+      </div>
+
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-white mb-3">{home.footer.navigasiJudul}</h2>
+        <ul class="space-y-2 text-xs">
+          {home.footer.navigasi.map((n) => <li><a href={href(n.anchor)} class="hover:text-white transition">{n.label}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-white mb-3">{home.footer.integrasiJudul}</h2>
+        <ul class="space-y-2 text-xs">
+          {home.footer.integrasi.map((i) => <li>{i}</li>)}
+          <li class="pt-1">
+            <a href={waLink(settings.whatsapp, settings.pesanWa.footer, settings.pesanWa.pembuka)} target="_blank" rel="noopener noreferrer" class="text-sky font-bold hover:underline">
+              {home.footer.kontakLabel}
+            </a>
+          </li>
+          {settings.email && <li><a href={`mailto:${settings.email}`} class="hover:text-white transition">{settings.email}</a></li>}
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="text-center sm:text-left">
+        {f.kreditNama && (<>{f.kreditAwal}{' '}<a href={f.kreditUrl} target="_blank" rel="noopener" class="text-white underline underline-offset-2 hover:text-sky">{f.kreditNama}<span class="sr-only"> {t('common.newTab')}</span></a>.{' '}</>)}&copy; {new Date().getFullYear()} {f.copyright}
+      </div>
+      <div>{settings.tagline}</div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,397 @@
+---
+// Panggung dua perangkat di hero. Isi layar = ilustrasi data demo (A2), tidak masuk CMS.
+// Ketiga adegan dirender di HTML; JS hanya mengganti adegan yang tampil (tanpa innerHTML).
+import Logo from './Logo.astro';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  adegan: string[];
+  autoPreview: string;
+  autoPreviewJeda: string;
+}
+const { lang, adegan, autoPreview, autoPreviewJeda } = Astro.props;
+const t = useTranslations(lang);
+
+const scenes = [
+  { nav: 0, breadcrumb: 'Dashboard / Ringkasan', title: 'Dashboard', sub: 'Unified partner revenue, multi-tier channel performance, and stock distribution.', partner: 'Nadia Kusuma Studio' },
+  { nav: 1, breadcrumb: 'Partners / Multi-Tier Network', title: 'Partners & Hierarchy', sub: 'Nested L1–L3 agent trees, territory locks, and reseller stock allocation.', partner: 'PT Nusantara Distribusi (L1)' },
+  { nav: 5, breadcrumb: 'Payouts & Royalties / Ledger', title: 'Payouts & Royalties', sub: 'Two-way ledger for outgoing partner commissions and incoming franchise royalties.', partner: 'Flagship Kemang (Franchise)' },
+];
+const modules = ['Dashboard', 'Partners', 'Products & Catalog', 'Commission & Rules', 'Orders & Inventory', 'Payouts & Royalties', 'Integrations', 'Settings'];
+const bars = [
+  ['Affiliates (184 active)', '$38,400', '72%'],
+  ['Multi-Tier Agents (76 active)', '$49,200', '94%'],
+  ['Stockist Resellers (58 active)', '$27,820', '55%'],
+  ['Franchises (24 outlets)', '$33,500', '65%'],
+];
+const hid = (i: number) => (i === 0 ? undefined : true);
+---
+
+<div id="hero-devices" data-label-aktif={autoPreview} data-label-jeda={autoPreviewJeda}>
+  <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+    <div role="group" aria-label={t('hero.scenes')} class="inline-flex items-center gap-1.5 bg-white border border-slate-200 rounded-lg p-1">
+      {
+        adegan.map((label, i) => (
+          <button
+            type="button"
+            data-scene-btn={i}
+            aria-pressed={i === 0 ? 'true' : 'false'}
+            class="px-2.5 py-1 rounded text-[11px] transition cursor-pointer aria-pressed:font-bold aria-pressed:bg-navy aria-pressed:text-white aria-[pressed=false]:font-semibold aria-[pressed=false]:text-slate-600 aria-[pressed=false]:hover:text-navy"
+          >
+            {label}
+          </button>
+        ))
+      }
+    </div>
+    <button type="button" id="scene-pause" aria-pressed="false" class="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 rounded cursor-pointer">
+      <span class="relative flex h-2 w-2">
+        <span data-ping class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span data-pause-label>{autoPreview}</span>
+    </button>
+  </div>
+
+  <div class="relative pb-10 sm:pb-12 pr-2 sm:pr-6" role="img" aria-label={t('hero.devices')}>
+    <div aria-hidden="true">
+      <!-- Laptop -->
+      <div class="animate-float-mac w-full max-w-[640px] mx-auto lg:mx-0">
+        <div class="bg-ink rounded-t-2xl p-2 sm:p-2.5 border-2 border-slate-700 shadow-2xl relative">
+          <div class="w-20 h-2.5 bg-ink rounded-b-md mx-auto -mt-2.5 mb-1.5 flex items-center justify-center relative z-20">
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-700 ring-1 ring-slate-600"></span>
+          </div>
+
+          <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-800 flex min-h-[340px] sm:min-h-[375px] text-left select-none">
+            <div class="w-32 sm:w-40 bg-navy text-white flex flex-col shrink-0 p-2.5 justify-between">
+              <div>
+                <div class="flex items-center gap-1.5 pb-2.5 border-b border-slate-800">
+                  <Logo varian="gelap" class="w-5 h-5" />
+                  <div>
+                    <div class="text-[9px] font-extrabold tracking-tight leading-none">CHANNELORY</div>
+                    <div class="text-[6.5px] text-sky-300 font-semibold tracking-wider uppercase mt-0.5">COMMAND CENTER</div>
+                  </div>
+                </div>
+                <div class="my-2 px-2 py-1.5 rounded bg-navy-dark border border-slate-700/70">
+                  <div class="text-[6.5px] uppercase text-slate-400 font-semibold">ACTIVE ENTITY</div>
+                  <div class="text-[8px] font-bold text-white truncate">GRINTEC GLOBAL - Main</div>
+                </div>
+                <div class="space-y-0.5 text-[8.5px]">
+                  {
+                    modules.map((m, i) => (
+                      <div
+                        data-nav={i}
+                        data-aktif={i === 0 ? 'true' : 'false'}
+                        class="group px-2 rounded flex items-center gap-1.5 data-[aktif=true]:py-1.5 data-[aktif=true]:bg-sky data-[aktif=true]:text-white data-[aktif=true]:font-bold data-[aktif=false]:py-1 data-[aktif=false]:text-slate-300 data-[aktif=false]:font-medium"
+                      >
+                        <span class="rounded-full group-data-[aktif=true]:w-1.5 group-data-[aktif=true]:h-1.5 group-data-[aktif=true]:bg-white group-data-[aktif=false]:w-1 group-data-[aktif=false]:h-1 group-data-[aktif=false]:bg-slate-500" />
+                        <span>{m}</span>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+              <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-[7px] text-slate-400">
+                <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>Odoo Synced</span>
+                <span class="font-mono-num">v2.4</span>
+              </div>
+            </div>
+
+            <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+              <div class="h-8 bg-white border-b border-slate-200 px-3 flex items-center justify-between gap-2 shrink-0">
+                <div class="text-[8px] text-slate-500 truncate">
+                  <span class="font-bold text-navy">Channelory</span> / {scenes.map((s, i) => <span data-scene={i} hidden={hid(i)}>{s.breadcrumb}</span>)}
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <div class="hidden sm:block px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-[7px] text-slate-400">Quick search...</div>
+                  <div class="w-4 h-4 rounded bg-navy text-white text-[7px] font-bold flex items-center justify-center">OW</div>
+                </div>
+              </div>
+
+              <div class="bg-white border-b border-slate-200 px-3 pt-2">
+                <div class="flex items-center justify-between gap-2">
+                  <div>
+                    {
+                      scenes.map((s, i) => (
+                        <div data-scene={i} hidden={hid(i)}>
+                          <div class="text-xs font-extrabold text-navy leading-none">{s.title}</div>
+                          <div class="text-[7.5px] text-slate-500 mt-0.5">{s.sub}</div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <span class="px-2 py-0.5 rounded bg-sky text-white text-[7.5px] font-bold shrink-0">+ Create Partner</span>
+                </div>
+                <div class="flex items-center gap-3 mt-2 text-[8px]">
+                  <span class="pb-1 border-b-2 border-sky font-bold text-navy">Ringkasan / Overview</span>
+                  <span class="pb-1 text-slate-400">Channel Analytics</span>
+                  <span class="pb-1 text-slate-400 hidden sm:inline">Live Activity</span>
+                </div>
+              </div>
+
+              <div data-fade class="p-2.5 sm:p-3 flex-1 overflow-hidden transition-opacity duration-300">
+                <!-- Adegan 0: Dashboard -->
+                <div data-scene="0" class="space-y-2.5">
+                  <div class="grid grid-cols-4 gap-1.5">
+                    {
+                      [
+                        ['REVENUE', '+18.4%', 'bg-emerald-50 text-emerald-700', '$148,920', 'Digital & physical'],
+                        ['PARTNERS', '4 Tracks', 'bg-sky-50 text-sky', '342', '184 Aff • 76 Agt'],
+                        ['PAYOUTS', '2-Way', 'bg-amber-50 text-amber-700', '$18,450', '$14.3k Out • $4.1k In'],
+                        ['STOCK HELD', 'Odoo', 'bg-slate-100 text-navy', '$64,200', '82 partner hubs'],
+                      ].map(([k, tag, tagCls, v, note]) => (
+                        <div class="bg-white border border-slate-200 rounded-md p-2">
+                          <div class="flex items-center justify-between text-[6.5px] font-bold text-slate-400">
+                            <span>{k}</span>
+                            <span class:list={['px-1 rounded', tagCls]}>{tag}</span>
+                          </div>
+                          <div class="font-mono-num text-[11px] font-extrabold text-navy mt-1">{v}</div>
+                          <div class="text-[6px] text-slate-400 truncate">{note}</div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <div class="bg-white border border-slate-200 rounded-md p-2.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[8.5px] font-bold text-navy">Channel Revenue Comparison</span>
+                      <span class="px-1.5 py-0.5 rounded bg-navy text-white text-[6.5px] font-bold">30D</span>
+                    </div>
+                    <div class="space-y-1.5 text-[7px]">
+                      {
+                        bars.map(([label, v, w]) => (
+                          <div>
+                            <div class="flex justify-between font-semibold text-slate-700 mb-0.5"><span>{label}</span><span class="font-mono-num font-bold">{v}</span></div>
+                            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-sky rounded-full transition-all duration-700" style={`width: ${w};`} /></div>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                  <div class="bg-white border border-slate-200 rounded-md p-2">
+                    <div class="text-[8px] font-bold text-navy mb-1">Top Performing Partners</div>
+                    <div class="flex items-center justify-between text-[7px] py-1 border-t border-slate-100">
+                      <div><span class="font-bold text-navy">Nadia Kusuma Studio</span> <span class="px-1 rounded bg-sky-50 text-sky font-bold">Affiliate</span></div>
+                      <span class="font-mono-num font-bold text-navy">$18,450</span>
+                    </div>
+                    <div class="flex items-center justify-between text-[7px] py-1 border-t border-slate-100">
+                      <div><span class="font-bold text-navy">PT Nusantara Distribusi</span> <span class="px-1 rounded bg-sky-50 text-sky font-bold">L1 Agent</span></div>
+                      <span class="font-mono-num font-bold text-navy">$34,200</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Adegan 1: Partners -->
+                <div data-scene="1" hidden class="space-y-2.5">
+                  <div class="bg-white border border-slate-200 rounded-md p-2.5 space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[8.5px] font-bold text-navy">Struktur Hierarki Agen Berjenjang (L1 &rarr; L2 &rarr; L3)</span>
+                      <span class="px-1.5 py-0.5 rounded bg-sky-50 text-sky text-[6.5px] font-bold">Odoo Live Stock</span>
+                    </div>
+                    <div class="p-2 rounded bg-navy text-white flex justify-between items-center text-[7.5px]">
+                      <span class="font-bold">HQ: GRINTEC GLOBAL (Pusat)</span>
+                      <span class="font-mono-num text-sky-300">1,420 Unit Ready</span>
+                    </div>
+                    <div class="pl-3 border-l-2 border-sky space-y-1.5 text-[7.5px]">
+                      <div class="p-2 rounded bg-slate-50 border border-slate-200 flex justify-between items-center">
+                        <div><span class="px-1 rounded bg-sky-100 text-sky font-bold">L1 MASTER</span> <strong class="text-navy">PT Nusantara Distribusi</strong></div>
+                        <span class="font-mono-num font-bold text-navy">Stok: $22,400</span>
+                      </div>
+                      <div class="pl-3 border-l border-slate-300 space-y-1">
+                        <div class="p-1.5 rounded bg-white border border-slate-200 flex justify-between items-center">
+                          <div><span class="px-1 rounded bg-slate-200 text-slate-700 font-bold">L2 AGEN</span> <strong class="text-navy">Dimas Saputra Network</strong></div>
+                          <span class="font-mono-num text-emerald-700 font-bold">5% L1 Override</span>
+                        </div>
+                        <div class="p-1.5 rounded bg-white border border-slate-200 flex justify-between items-center">
+                          <div><span class="px-1 rounded bg-emerald-50 text-emerald-700 font-bold">STOKIS</span> <strong class="text-navy">Aurelia Beauty Hub</strong></div>
+                          <span class="font-mono-num text-slate-600 font-bold">Stok: $14,800</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-2 text-[7.5px]">
+                    <div class="bg-white border border-slate-200 rounded-md p-2">
+                      <div class="text-slate-400 font-bold uppercase text-[6.5px]">Restock PO Menunggu</div>
+                      <div class="font-bold text-navy mt-0.5">PO-4492 &bull; 120x Botanical Elixir</div>
+                      <div class="text-sky font-mono-num font-bold mt-0.5">$6,240 (Harga Tier L1)</div>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-md p-2">
+                      <div class="text-slate-400 font-bold uppercase text-[6.5px]">Proteksi Teritori Aktif</div>
+                      <div class="font-bold text-navy mt-0.5">Jawa Barat &amp; Jabodetabek</div>
+                      <div class="text-emerald-600 font-bold mt-0.5">Zero Conflict Verified</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Adegan 2: Payouts -->
+                <div data-scene="2" hidden class="space-y-2.5">
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="bg-white border border-slate-200 rounded-md p-2.5">
+                      <div class="text-[6.5px] font-bold uppercase text-slate-400">OUTGOING COMMISSIONS</div>
+                      <div class="font-mono-num text-xs font-extrabold text-navy mt-0.5">$14,330.00</div>
+                      <div class="text-[7px] text-sky font-semibold mt-0.5">Batch Siap Cair (Bank &amp; Wise)</div>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-md p-2.5">
+                      <div class="text-[6.5px] font-bold uppercase text-slate-400">INCOMING FRANCHISE ROYALTY</div>
+                      <div class="font-mono-num text-xs font-extrabold text-emerald-700 mt-0.5">$4,120.00</div>
+                      <div class="text-[7px] text-emerald-600 font-semibold mt-0.5">6% Gross POS + 1.5% Marketing</div>
+                    </div>
+                  </div>
+                  <div class="bg-white border border-slate-200 rounded-md p-2.5 space-y-1.5 text-[7.5px]">
+                    <div class="font-bold text-navy">Buku Besar Penyelesaian Dua Arah</div>
+                    <div class="flex items-center justify-between py-1 border-t border-slate-100">
+                      <div><strong class="text-navy">PAY-309</strong> &bull; PT Nusantara Distribusi</div>
+                      <span class="px-1.5 py-0.5 rounded bg-sky-50 text-sky font-mono-num font-bold">Out: $6,840</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-t border-slate-100">
+                      <div><strong class="text-navy">ROY-114</strong> &bull; Scentanica Flagship Kemang</div>
+                      <span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 font-mono-num font-bold">In: $4,120 (Paid)</span>
+                    </div>
+                    <div class="flex items-center justify-between py-1 border-t border-slate-100">
+                      <div><strong class="text-navy">PAY-308</strong> &bull; Nadia Kusuma Studio</div>
+                      <span class="px-1.5 py-0.5 rounded bg-sky-50 text-sky font-mono-num font-bold">Out: $2,767</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative mx-auto">
+          <div class="h-3 bg-slate-300 rounded-b-xl border-x border-b border-slate-400 shadow-md flex items-start justify-center">
+            <div class="w-16 h-1 bg-slate-400 rounded-b"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ponsel -->
+      <div class="animate-float-android w-[178px] sm:w-[205px] bg-ink rounded-[26px] p-2 border-2 border-slate-700 shadow-2xl absolute -bottom-2 right-0 sm:right-2 z-20 select-none">
+        <div class="w-0.5 h-6 bg-slate-600 rounded-r absolute -right-[3px] top-16"></div>
+        <div class="w-0.5 h-10 bg-slate-600 rounded-r absolute -right-[3px] top-24"></div>
+
+        <div class="bg-slate-50 rounded-[20px] overflow-hidden border border-slate-800 flex flex-col">
+          <div class="bg-navy text-white px-3 pt-1.5 pb-2">
+            <div class="flex items-center justify-between text-[7px] font-mono-num text-slate-300 mb-1.5">
+              <span>21:05</span>
+              <span class="w-2 h-2 rounded-full bg-black ring-1 ring-slate-700"></span>
+              <span>5G &bull; 98%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-[7px] uppercase tracking-wider text-sky-300 font-bold">CHANNELORY PARTNER</div>
+                <div class="text-[9.5px] font-extrabold text-white truncate">
+                  {scenes.map((s, i) => <span data-scene={i} hidden={hid(i)}>{s.partner}</span>)}
+                </div>
+              </div>
+              <span class="px-1.5 py-0.5 rounded bg-sky text-white text-[7px] font-bold">APP</span>
+            </div>
+          </div>
+
+          <div data-fade class="p-2.5 text-left transition-opacity duration-300">
+            <div data-scene="0" class="space-y-2">
+              <div class="bg-navy text-white rounded-xl p-2.5">
+                <div class="text-[7px] text-slate-300 font-semibold">Komisi Siap Cair (15% CPA)</div>
+                <div class="font-mono-num text-sm font-extrabold text-sky mt-0.5">Rp 14.850.000</div>
+                <div class="mt-1.5 flex items-center justify-between text-[7px] text-emerald-300 font-bold">
+                  <span>+Rp 810rb hari ini</span>
+                  <span class="px-1.5 py-0.5 rounded bg-white/10 text-white">Tarik Dana</span>
+                </div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1">
+                <div class="text-[7px] font-bold text-slate-500 uppercase">Link Referral &amp; Kupon</div>
+                <div class="px-2 py-1 rounded bg-slate-100 font-mono-num text-[7.5px] font-bold text-navy truncate">channelory.link/nadia15</div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1 text-[7.5px]">
+                <div class="font-bold text-navy">Konversi Terbaru (Shopify)</div>
+                <div class="flex justify-between text-slate-600"><span>Order #8841 (3x Oud)</span><span class="font-mono-num font-bold text-emerald-600">+Rp 810rb</span></div>
+                <div class="flex justify-between text-slate-600"><span>Order #8836 (2x Elixir)</span><span class="font-mono-num font-bold text-emerald-600">+Rp 382rb</span></div>
+              </div>
+            </div>
+
+            <div data-scene="1" hidden class="space-y-2">
+              <div class="bg-navy text-white rounded-xl p-2.5">
+                <div class="text-[7px] text-slate-300 font-semibold">Nilai Stok Gudang Agen</div>
+                <div class="font-mono-num text-sm font-extrabold text-white mt-0.5">340 Unit SKU</div>
+                <div class="mt-1.5 flex items-center justify-between text-[7px] text-sky-300 font-bold">
+                  <span>Bonus Override: Rp 9,4jt</span>
+                  <span class="px-1.5 py-0.5 rounded bg-sky text-white">+ PO Restock</span>
+                </div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1 text-[7.5px]">
+                <div class="font-bold text-navy">Performa Downline (14 Agen)</div>
+                <div class="flex justify-between text-slate-600"><span>Dimas Saputra (L2)</span><span class="font-mono-num font-bold text-sky">+Rp 1,8jt</span></div>
+                <div class="flex justify-between text-slate-600"><span>Aurelia Hub (Stokis)</span><span class="font-mono-num font-bold text-sky">+Rp 1,2jt</span></div>
+              </div>
+              <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-2 text-[7px] text-emerald-800 font-bold">Harga Grosir L1 Aktif (Diskon 38% MSRP)</div>
+            </div>
+
+            <div data-scene="2" hidden class="space-y-2">
+              <div class="bg-navy text-white rounded-xl p-2.5">
+                <div class="text-[7px] text-slate-300 font-semibold">Omzet POS Gerai Bulan Ini</div>
+                <div class="font-mono-num text-sm font-extrabold text-white mt-0.5">Rp 286.000.000</div>
+                <div class="mt-1.5 flex items-center justify-between text-[7px] text-emerald-300 font-bold">
+                  <span>Royalti 6%: Lunas</span>
+                  <span class="px-1.5 py-0.5 rounded bg-white/10 text-white">Invoice PDF</span>
+                </div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-lg p-2 space-y-1 text-[7.5px]">
+                <div class="font-bold text-navy">Rincian Tagihan Otomatis</div>
+                <div class="flex justify-between text-slate-600"><span>Royalti Brand (6%)</span><span class="font-mono-num font-bold text-navy">Rp 17,16jt</span></div>
+                <div class="flex justify-between text-slate-600"><span>Marketing Fund (1.5%)</span><span class="font-mono-num font-bold text-navy">Rp 4,29jt</span></div>
+              </div>
+              <div class="bg-sky-50 border border-sky-200 rounded-lg p-2 text-[7px] text-navy font-bold">Odoo POS Terhubung Real-Time</div>
+            </div>
+          </div>
+
+          <div class="py-1.5 bg-white border-t border-slate-200 flex justify-center">
+            <div class="w-14 h-1 rounded-full bg-slate-300"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const root = document.getElementById('hero-devices')!;
+  const btns = [...root.querySelectorAll<HTMLButtonElement>('[data-scene-btn]')];
+  const pause = root.querySelector<HTMLButtonElement>('#scene-pause')!;
+  const pauseLabel = pause.querySelector<HTMLElement>('[data-pause-label]')!;
+  const ping = pause.querySelector<HTMLElement>('[data-ping]')!;
+  const fades = [...root.querySelectorAll<HTMLElement>('[data-fade]')];
+  const navIndex = [0, 1, 5];
+  const count = btns.length;
+  let active = 0;
+  let timer: number | undefined;
+
+  function show(idx: number) {
+    active = idx;
+    btns.forEach((b, i) => b.setAttribute('aria-pressed', String(i === idx)));
+    root.querySelectorAll<HTMLElement>('[data-nav]').forEach((el) => (el.dataset.aktif = String(Number(el.dataset.nav) === navIndex[idx])));
+    fades.forEach((f) => (f.style.opacity = '0.35'));
+    setTimeout(() => {
+      root.querySelectorAll<HTMLElement>('[data-scene]').forEach((el) => (el.hidden = Number(el.dataset.scene) !== idx));
+      fades.forEach((f) => (f.style.opacity = '1'));
+    }, 150);
+  }
+
+  function setRunning(run: boolean) {
+    clearInterval(timer);
+    timer = run ? window.setInterval(() => show((active + 1) % count), 4500) : undefined;
+    pause.setAttribute('aria-pressed', String(!run));
+    pauseLabel.textContent = (run ? root.dataset.labelAktif : root.dataset.labelJeda) ?? '';
+    ping.hidden = !run;
+  }
+
+  btns.forEach((b, i) =>
+    b.addEventListener('click', () => {
+      setRunning(false);
+      show(i);
+    }),
+  );
+  pause.addEventListener('click', () => setRunning(timer === undefined));
+
+  // Konten yang berganti sendiri harus bisa dihentikan (WCAG 2.2.2); mati total saat reduced motion.
+  setRunning(!window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+</script>

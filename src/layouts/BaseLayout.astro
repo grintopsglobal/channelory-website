@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import Tracking from '../components/Tracking.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
+import { useTranslations } from '../i18n/utils';
+import { withBase } from '../lib/url';
+import { waLink } from '../lib/wa';
+import { getPage, getSettings } from '../lib/content';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  keywords?: string;
+  alternates: Record<Lang, string>;
+  jsonLd?: Record<string, unknown>[];
+  noindex?: boolean;
+  /** true di beranda: link menu memakai #anchor; di halaman lain memakai /id/#anchor. */
+  beranda?: boolean;
+}
+const { lang, beranda = false, ...seo } = Astro.props;
+const t = useTranslations(lang);
+const [settings, home] = await Promise.all([getSettings(lang), getPage(lang, 'home')]);
+const wa = (pesan: string) => waLink(settings.whatsapp, pesan, settings.pesanWa.pembuka);
+---
+
+<!doctype html>
+<html lang={lang} class="motion-safe:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO {...seo} lang={lang} siteName="Channelory" />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+    <Tracking tracking={settings.tracking} part="head" />
+  </head>
+  <body class="antialiased selection:bg-sky selection:text-white">
+    <Tracking tracking={settings.tracking} part="body" />
+    <a href="#konten" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-white focus:text-navy focus:text-sm focus:font-bold focus:shadow-lg">{t('nav.skip')}</a>
+    <Header lang={lang} beranda={beranda} home={home} settings={settings} />
+    <main id="konten" class="pt-20">
+      <slot />
+    </main>
+    <Footer lang={lang} beranda={beranda} home={home} settings={settings} />
+
+    <a
+      href={wa(settings.pesanWa.melayang)}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={t('wa.float')}
+      class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-lg transition"
+    >
+      <Icon name="wa" class="w-5 h-5" />
+      <span class="hidden sm:inline">{home.melayang.label}</span>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+---
+// Section harga. Data satu sumber (koleksi paket); JS membaca JSON yang dirender di sini (A3).
+import Icon from './Icon.astro';
+import { useTranslations } from '../i18n/utils';
+import { inlineMd } from '../lib/md';
+import { waLink } from '../lib/wa';
+import type { Home, Mode, Paket } from '../lib/content';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  teks: Home['harga'];
+  paket: Paket[];
+  whatsapp: string;
+  pembuka: string;
+}
+const { lang, teks, paket, whatsapp, pembuka } = Astro.props;
+const t = useTranslations(lang);
+const modes: Mode[] = ['bulanan', 'tahunan', 'sekaliBayar'];
+
+// Per paket per mode: teks yang berganti + href WA yang sudah jadi.
+const data = Object.fromEntries(
+  paket.map((p) => [
+    p.key,
+    Object.fromEntries(modes.map((m) => {
+      const h = p.mode[m];
+      return [m, { harga: h.harga, satuan: h.satuan, catatan: h.catatan, fiturTambahan: h.fiturTambahan, href: waLink(whatsapp, h.pesanWa, pembuka) }];
+    })),
+  ]),
+);
+
+const gaya = {
+  standar: {
+    card: 'bg-white border border-slate-200', judul: 'text-navy', badge: 'bg-slate-100 text-slate-600 text-[11px] font-bold',
+    desk: 'text-slate-500', garis: 'border-slate-100', harga: 'text-navy', satuan: 'text-slate-500', catatan: 'text-slate-500',
+    list: 'text-slate-700', cta: 'bg-slate-100 hover:bg-navy text-navy hover:text-white',
+  },
+  sorot: {
+    card: 'on-dark bg-navy text-white border-2 border-sky shadow-lg relative', judul: 'text-white', badge: 'bg-cta text-cta-ink text-[10px] font-extrabold uppercase tracking-wider',
+    desk: 'text-slate-300', garis: 'border-slate-700', harga: 'text-white', satuan: 'text-slate-300', catatan: 'text-sky-300',
+    list: 'text-slate-200', cta: 'bg-cta hover:bg-cta-hover text-cta-ink shadow-xs',
+  },
+  lembut: {
+    card: 'bg-slate-bg border border-slate-300', judul: 'text-navy', badge: 'bg-sky-100 text-navy text-[10px] font-extrabold uppercase',
+    desk: 'text-slate-600', garis: 'border-slate-200', harga: 'text-navy', satuan: 'text-slate-500', catatan: 'text-slate-500',
+    list: 'text-slate-700', cta: 'bg-navy hover:bg-navy-dark text-white',
+  },
+} as const;
+
+const billBtn = 'px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer aria-pressed:bg-navy aria-pressed:text-white aria-[pressed=false]:text-slate-600 aria-[pressed=false]:hover:text-navy';
+const catBtn = 'px-3 py-1 rounded-full border transition cursor-pointer aria-pressed:bg-sky-50 aria-pressed:border-sky aria-pressed:text-navy aria-pressed:font-bold aria-[pressed=false]:bg-white aria-[pressed=false]:border-slate-200 aria-[pressed=false]:text-slate-600 aria-[pressed=false]:hover:border-slate-400 aria-[pressed=false]:font-semibold';
+---
+
+<section id="harga" class="py-20 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="text-xs font-extrabold uppercase tracking-wider text-sky-text">{teks.eyebrow}</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mt-2">{teks.judul}</h2>
+      <p class="text-sm sm:text-base text-slate-600 mt-3" set:html={inlineMd(teks.paragraf)} />
+
+      <div class="mt-8 flex flex-col items-center gap-3">
+        <div role="group" aria-label={t('price.billing')} class="inline-flex flex-wrap justify-center items-center gap-1.5 p-1.5 rounded-xl bg-slate-100 border border-slate-200">
+          <button type="button" data-bill="bulanan" aria-pressed="true" class={billBtn}>{teks.filterBulanan}</button>
+          <button type="button" data-bill="tahunan" aria-pressed="false" class={billBtn}>
+            <span>{teks.filterTahunan}</span>
+            <span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-extrabold">{teks.filterTahunanBadge}</span>
+          </button>
+          <button type="button" data-bill="sekaliBayar" aria-pressed="false" class={billBtn}>
+            <span>{teks.filterSekaliBayar}</span>
+            <span class="px-1.5 py-0.5 rounded bg-sky-100 text-navy text-[10px] font-extrabold">{teks.filterSekaliBayarBadge}</span>
+          </button>
+        </div>
+
+        <div role="group" aria-label={t('price.scheme')} class="inline-flex flex-wrap justify-center items-center gap-2 text-xs">
+          <span class="text-slate-500 font-semibold">{teks.filterSkemaLabel}</span>
+          <button type="button" data-cat="all" aria-pressed="true" class={catBtn}>{teks.filterSemua} ({paket.length})</button>
+          <button type="button" data-cat="saas" aria-pressed="false" class={catBtn}>{teks.filterSaas}</button>
+          <button type="button" data-cat="enterprise" aria-pressed="false" class={catBtn}>{teks.filterEnterprise}</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="pricing-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10 items-stretch">
+      {
+        paket.map((p) => {
+          const g = gaya[p.gaya];
+          const m = p.mode.bulanan;
+          return (
+            <div data-key={p.key} data-category={p.kategori} class:list={['pricing-card iso-visible rounded-2xl p-6 flex flex-col justify-between', g.card]}>
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class:list={['text-lg font-extrabold', g.judul]}>{p.nama}</h3>
+                  <span class:list={['px-2.5 py-0.5 rounded', g.badge]}>{p.badge}</span>
+                </div>
+                <p class:list={['text-xs mt-2', g.desk]}>{p.deskripsi}</p>
+
+                <div class:list={['mt-6 pb-6 border-b', g.garis]}>
+                  <div class="flex items-baseline gap-1">
+                    <span data-f="harga" class:list={['font-mono-num text-2xl sm:text-3xl font-extrabold', g.harga]}>{m.harga}</span>
+                    <span data-f="satuan" class:list={['text-xs', g.satuan]}>{m.satuan}</span>
+                  </div>
+                  <div data-f="catatan" class:list={['text-[11px] mt-1', g.catatan]}>{m.catatan}</div>
+                </div>
+
+                <ul class:list={['mt-6 space-y-3 text-xs', g.list]}>
+                  {[...p.fitur, null].map((f) => (
+                    <li class="flex items-start gap-2.5">
+                      <Icon name="centang" class="w-4 h-4 text-sky shrink-0 mt-0.5" stroke="2.5" />
+                      {f === null ? <span data-f="fiturTambahan">{m.fiturTambahan}</span> : <span set:html={inlineMd(f)} />}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="mt-8">
+                <a data-f="href" href={data[p.key].bulanan.href} target="_blank" rel="noopener noreferrer" class:list={['w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-xs font-bold transition', g.cta]}>
+                  {p.cta}
+                </a>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+  <script type="application/json" id="pricing-data" set:html={JSON.stringify(data).replace(/</g, '\\u003c')} />
+</section>
+
+<script>
+  type Fields = { harga: string; satuan: string; catatan: string; fiturTambahan: string; href: string };
+  const data: Record<string, Record<string, Fields>> = JSON.parse(document.getElementById('pricing-data')!.textContent!);
+  const section = document.getElementById('harga')!;
+  const cards = [...section.querySelectorAll<HTMLElement>('.pricing-card')];
+  let category = 'all';
+
+  // Sama dengan animateIsotopeCards di mockup.
+  function animateCards() {
+    cards.forEach((card) => {
+      const show = category === 'all' || card.dataset.category === category;
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.96)';
+      setTimeout(() => {
+        card.classList.toggle('iso-hidden', !show);
+        card.classList.toggle('iso-visible', show);
+        if (show)
+          requestAnimationFrame(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+          });
+      }, 140);
+    });
+  }
+
+  function press(selector: string, active: HTMLElement) {
+    section.querySelectorAll(selector).forEach((b) => b.setAttribute('aria-pressed', String(b === active)));
+  }
+
+  section.querySelectorAll<HTMLButtonElement>('[data-bill]').forEach((btn) =>
+    btn.addEventListener('click', () => {
+      press('[data-bill]', btn);
+      cards.forEach((card) => {
+        const info = data[card.dataset.key!][btn.dataset.bill!];
+        card.querySelectorAll<HTMLElement>('[data-f]').forEach((el) => {
+          const f = el.dataset.f as keyof Fields;
+          if (f === 'href') (el as HTMLAnchorElement).href = info.href;
+          else el.textContent = info[f];
+        });
+      });
+      animateCards();
+    }),
+  );
+
+  section.querySelectorAll<HTMLButtonElement>('[data-cat]').forEach((btn) =>
+    btn.addEventListener('click', () => {
+      press('[data-cat]', btn);
+      category = btn.dataset.cat!;
+      animateCards();
+    }),
+  );
+</script>

@@ -1,0 +1,82 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { localizePath, useTranslations } from '../i18n/utils';
+import { waLink } from '../lib/wa';
+import type { Home, Settings } from '../lib/content';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  beranda: boolean;
+  home: Home;
+  settings: Settings;
+}
+const { lang, beranda, home, settings } = Astro.props;
+const t = useTranslations(lang);
+const href = (anchor: string) => (beranda ? `#${anchor}` : localizePath(lang, `/#${anchor}`));
+const waHeader = waLink(settings.whatsapp, settings.pesanWa.header, settings.pesanWa.pembuka);
+---
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <a href={beranda ? '#' : localizePath(lang)} class="flex items-center gap-3" aria-label={t('brand.home')}>
+      <Logo label={t('brand.logo')} />
+      <div>
+        <span class="block text-lg font-extrabold tracking-tight text-navy leading-none">CHANNELORY</span>
+        <span class="block text-[10px] font-semibold tracking-wider text-slate-500 uppercase mt-1">{settings.tagline}</span>
+      </div>
+    </a>
+
+    <nav aria-label={t('nav.primary')} class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      {home.menu.map((m) => <a href={href(m.anchor)} class="hover:text-sky-text transition">{m.label}</a>)}
+    </nav>
+
+    <div class="hidden sm:flex items-center gap-3">
+      <a href={waHeader} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-cta hover:bg-cta-hover text-cta-ink text-sm font-bold transition shadow-xs">
+        <span>{home.header.cta}</span>
+        <Icon name="panah" class="w-4 h-4" stroke="2.2" />
+      </a>
+    </div>
+
+    <button
+      type="button"
+      id="mobile-nav-btn"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label={t('nav.open')}
+      data-label-open={t('nav.open')}
+      data-label-close={t('nav.close')}
+      class="lg:hidden p-2.5 rounded-lg border border-slate-200 text-navy hover:bg-slate-50"
+    >
+      <Icon name="menu" class="w-5 h-5" />
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2">
+    {home.menu.map((m) => <a href={href(m.anchor)} class="block py-2 text-sm font-semibold text-slate-700 hover:text-sky-text">{m.label}</a>)}
+    <div class="pt-2">
+      <a href={waHeader} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-cta text-cta-ink text-sm font-bold">
+        {home.header.ctaMobile}
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-nav-btn')!;
+  const nav = document.getElementById('mobile-nav')!;
+  const setOpen = (open: boolean) => {
+    nav.classList.toggle('hidden', !open);
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', (open ? btn.dataset.labelClose : btn.dataset.labelOpen) ?? '');
+  };
+  btn.addEventListener('click', () => setOpen(nav.classList.contains('hidden')));
+  nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !nav.classList.contains('hidden')) {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+</script>

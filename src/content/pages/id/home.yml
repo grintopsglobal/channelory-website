@@ -1,0 +1,101 @@
+type: home
+menu:
+  - label: Manfaat
+    anchor: manfaat
+  - label: Fitur
+    anchor: fitur
+  - label: Harga
+    anchor: harga
+  - label: Tentang
+    anchor: tentang
+  - label: FAQ
+    anchor: faq
+header:
+  cta: Coba Sekarang
+  ctaMobile: Coba Sekarang via WhatsApp
+hero:
+  label: UNIFYING PARTNERS, OPTIMIZING NETWORKS.
+  judul: Satu Command Center untuk Afiliasi, Reseller, Agen & Franchise Anda.
+  judulSorot: Afiliasi, Reseller, Agen & Franchise
+  paragraf: Tinggalkan pelacakan afiliasi konvensional yang terbatas pada tautan referral. Channelory menyatukan pemasaran afiliasi digital dengan jaringan distribusi fisik, lengkap dengan hierarki agen berjenjang, kontrol stok, royalti franchise, serta sinkronisasi langsung ke **WooCommerce, Shopify, Odoo, dan ERPNext**.
+  ctaUtama: Coba Sekarang via WhatsApp
+  ctaHarga: Lihat Paket Harga
+  integrasiJudul: "Siap Terintegrasi dengan Ekosistem Bisnis Anda:"
+  integrasi:
+    - WooCommerce
+    - Shopify Plus
+    - Odoo ERP
+    - ERPNext
+  adegan:
+    - 1. Command Center Dashboard
+    - 2. Multi-Tier Agen & Stok
+    - 3. Royalti & Payouts
+  autoPreview: Auto-Preview Aktif
+  autoPreviewJeda: Auto-Preview Dijeda
+manfaat:
+  eyebrow: Manfaat Bisnis
+  judul: Dirancang untuk Brand & Principal yang Ingin Tumbuh Tanpa Kekacauan Operasional
+  paragraf: Mengelola puluhan hingga ribuan mitra penjualan dengan spreadsheet manual memicu salah hitung komisi, kebocoran harga grosir, dan stok yang tidak terlacak. Channelory mengotomatiskan seluruh alur tersebut.
+fitur:
+  eyebrow: Fitur Lengkap Enterprise
+  judul: Infrastruktur Lengkap untuk Mengelola Setiap Model Kemitraan Penjualan
+  paragraf: Dari atribusi link konten kreator hingga penagihan royalti bulanan outlet franchise, seluruh modul bekerja dalam satu alur data terpusat.
+harga:
+  eyebrow: Paket & Harga Transparan
+  judul: "Investasi Fleksibel: Langganan SaaS atau Lisensi Sekali Bayar (One-Time)"
+  paragraf: Gunakan filter di bawah untuk membandingkan biaya langganan bulanan, tahunan, maupun pembelian lisensi permanen **One-Time License** untuk setiap skala jaringan Anda.
+  filterBulanan: Bulanan (SaaS)
+  filterTahunan: Tahunan
+  filterTahunanBadge: Hemat 20%
+  filterSekaliBayar: One-Time License
+  filterSekaliBayarBadge: Sekali Bayar
+  filterSkemaLabel: "Filter Skema:"
+  filterSemua: Semua Paket
+  filterSaas: Cloud SaaS Ready
+  filterEnterprise: Enterprise & Whitelabel
+tentang:
+  eyebrow: Tentang Channelory
+  judul: Menjembatani Dunia Afiliasi Digital dan Distribusi Fisik dalam Satu Arsitektur Modern
+  paragraf1: Banyak platform pelacakan afiliasi global hanya berhenti pada tautan referral digital. Padahal di dunia nyata, pertumbuhan brand modern bertumpu pada kombinasi **konten kreator online, jaringan reseller yang menyetok barang, agen daerah berjenjang, hingga gerai franchise**.
+  paragraf2: '**Channelory** dibangun dengan prinsip *"Unifying partners, optimizing networks."* Prinsip ini memberi satu pusat kendali bagi pemilik merek dan tim operasional untuk merancang aturan komisi, mengawasi pergerakan inventori, dan menghubungkan data penjualan langsung ke sistem akuntansi maupun ERP perusahaan.'
+  pilar:
+    - label: Visi Produk
+      judul: Omnichannel Partner Infrastructure
+      deskripsi: Menghilangkan sekat antara tim digital marketing (afiliasi) dan tim sales distribusi (agen/franchise).
+    - label: Arsitektur Terbuka
+      judul: Storefront & ERP Native
+      deskripsi: Dirancang agar mudah dipasang di WooCommerce/Shopify sekaligus siap terhubung ke Odoo dan ERPNext.
+    - label: Keamanan Enterprise
+      judul: RBAC & Audit Trail Lengkap
+      deskripsi: Pemisahan hak akses ketat antara tim operasional mitra, bagian gudang, dan tim keuangan pencairan.
+    - label: Skalabilitas
+      judul: Dari 10 ke 10.000+ Mitra
+      deskripsi: Struktur database hierarki yang tetap responsif menghitung komisi berjenjang secara real-time.
+faq:
+  eyebrow: Pertanyaan Umum (FAQ)
+  judul: Hal yang Sering Ditanyakan Sebelum Memulai
+banner:
+  eyebrow: Siap Mengoptimalkan Jaringan Mitra Anda?
+  judul: Konsultasikan Skema Afiliasi, Reseller, Agen, atau Franchise Anda Bersama Tim Kami
+  paragraf: Dapatkan sesi demo langsung dan rekomendasi struktur komisi yang paling sesuai untuk model bisnis Anda via WhatsApp.
+  cta: Coba Sekarang via WhatsApp
+footer:
+  navigasiJudul: Navigasi
+  navigasi:
+    - label: Manfaat Bisnis
+      anchor: manfaat
+    - label: Fitur Platform
+      anchor: fitur
+    - label: Paket & Harga
+      anchor: harga
+    - label: Tentang Kami
+      anchor: tentang
+    - label: FAQ
+      anchor: faq
+  integrasiJudul: Integrasi & Kontak
+  integrasi:
+    - WooCommerce & Shopify
+    - Odoo & ERPNext Connector
+  kontakLabel: Hubungi WhatsApp Sales →
+melayang:
+  label: Coba Sekarang (WA)

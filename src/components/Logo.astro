@@ -1,0 +1,23 @@
+---
+// Logo dari mockup. "terang": heksagon navy + 2 titik (header). "gelap": heksagon putih tanpa titik (footer, sidebar perangkat).
+interface Props {
+  varian?: 'terang' | 'gelap';
+  class?: string;
+  label?: string;
+}
+const { varian = 'terang', class: cls = 'w-10 h-10', label } = Astro.props;
+const terang = varian === 'terang';
+---
+
+<svg class:list={['shrink-0', cls]} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role={label ? 'img' : undefined} aria-label={label} aria-hidden={label ? undefined : 'true'}>
+  <path d="M24 4L41 13.8V19.5L35 16V17.2L24 10.9L13 17.2V30.8L24 37.1L35 30.8V28.2L41 31.7V34.2L24 44L7 34.2V13.8L24 4Z" fill={terang ? '#13294B' : '#FFFFFF'}></path>
+  <path d="M16.5 27.5L21.5 22.5L25 26L33.5 17.5L30.5 14.5H40V24L37 21L25 33L21.5 29.5L18.5 32.5L16.5 27.5Z" fill="#00A3E0"></path>
+  {
+    terang && (
+      <>
+        <circle cx="22.5" cy="17.5" r="2.2" fill="#13294B" />
+        <circle cx="35.5" cy="26.5" r="2.2" fill="#00A3E0" />
+      </>
+    )
+  }
+</svg>

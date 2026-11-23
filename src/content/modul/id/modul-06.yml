@@ -1,0 +1,9 @@
+order: 6
+nomor: Modul 06
+label: PLUG & PLAY API
+ikon: ""
+judul: Integrasi E-Commerce & ERP Native
+deskripsi: Hubungkan toko online **WooCommerce & Shopify** untuk pelacakan konversi real-time, serta sinkronkan akuntansi dan inventori dengan **Odoo & ERPNext**.
+poin:
+  - Plugin resmi & webhook dua arah
+  - Kontrol akses tim berbasis RBAC & 2FA
