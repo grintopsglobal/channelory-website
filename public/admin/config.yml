@@ -175,7 +175,6 @@ collections:
         widget: object
         i18n: true
         fields:
-          - { label: Label kecil, name: label, widget: string, i18n: true }
           - { label: Judul (H1), name: judul, widget: string, i18n: true }
           - { label: Bagian judul berwarna, name: judulSorot, widget: string, required: false, i18n: true, hint: 'Harus persis ada di judul.' }
           - { label: Paragraf, name: paragraf, widget: markdown, buttons: [bold, italic], editor_components: [], modes: [rich_text, raw], i18n: true }
@@ -186,6 +185,7 @@ collections:
           - { label: Tombol adegan (3), name: adegan, widget: list, min: 3, max: 3, field: { label: Teks, name: teks, widget: string }, i18n: true }
           - { label: Label auto-preview berjalan, name: autoPreview, widget: string, i18n: true }
           - { label: Label auto-preview dijeda, name: autoPreviewJeda, widget: string, i18n: true }
+          - { label: Keterangan di bawah ilustrasi, name: ilustrasiCatatan, widget: string, required: false, i18n: true, hint: 'Penanda bahwa isi layar perangkat adalah data contoh.' }
       - label: Section Manfaat
         name: manfaat
         widget: object

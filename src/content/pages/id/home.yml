@@ -11,14 +11,13 @@ menu:
   - label: FAQ
     anchor: faq
 header:
-  cta: Coba Sekarang
-  ctaMobile: Coba Sekarang via WhatsApp
+  cta: Hubungi Sales
+  ctaMobile: Hubungi Sales via WhatsApp
 hero:
-  label: UNIFYING PARTNERS, OPTIMIZING NETWORKS.
   judul: Satu Command Center untuk Afiliasi, Reseller, Agen & Franchise Anda.
   judulSorot: Afiliasi, Reseller, Agen & Franchise
   paragraf: Tinggalkan pelacakan afiliasi konvensional yang terbatas pada tautan referral. Channelory menyatukan pemasaran afiliasi digital dengan jaringan distribusi fisik, lengkap dengan hierarki agen berjenjang, kontrol stok, royalti franchise, serta sinkronisasi langsung ke **WooCommerce, Shopify, Odoo, dan ERPNext**.
-  ctaUtama: Coba Sekarang via WhatsApp
+  ctaUtama: Jadwalkan Demo via WhatsApp
   ctaHarga: Lihat Paket Harga
   integrasiJudul: "Siap Terintegrasi dengan Ekosistem Bisnis Anda:"
   integrasi:
@@ -32,6 +31,7 @@ hero:
     - 3. Royalti & Payouts
   autoPreview: Auto-Preview Aktif
   autoPreviewJeda: Auto-Preview Dijeda
+  ilustrasiCatatan: Ilustrasi tampilan aplikasi dengan data contoh.
 manfaat:
   eyebrow: Manfaat Bisnis
   judul: Dirancang untuk Brand & Principal yang Ingin Tumbuh Tanpa Kekacauan Operasional
@@ -78,7 +78,7 @@ banner:
   eyebrow: Siap Mengoptimalkan Jaringan Mitra Anda?
   judul: Konsultasikan Skema Afiliasi, Reseller, Agen, atau Franchise Anda Bersama Tim Kami
   paragraf: Dapatkan sesi demo langsung dan rekomendasi struktur komisi yang paling sesuai untuk model bisnis Anda via WhatsApp.
-  cta: Coba Sekarang via WhatsApp
+  cta: Konsultasi via WhatsApp
 footer:
   navigasiJudul: Navigasi
   navigasi:
@@ -96,6 +96,6 @@ footer:
   integrasi:
     - WooCommerce & Shopify
     - Odoo & ERPNext Connector
-  kontakLabel: Hubungi WhatsApp Sales →
+  kontakLabel: Hubungi WhatsApp Sales
 melayang:
-  label: Coba Sekarang (WA)
+  label: Chat WhatsApp

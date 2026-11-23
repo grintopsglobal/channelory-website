@@ -10,7 +10,7 @@ fitur:
   - Modul Royalti Franchise & Marketing Fund
   - Multi-Entity Workspace & Proteksi Teritori
   - RBAC Granular, Audit Log & Wajib 2FA
-cta: "Coba Sekarang: Enterprise"
+cta: Tanya Paket Enterprise
 mode:
   bulanan:
     harga: Rp 5,99jt
@@ -18,14 +18,14 @@ mode:
     satuan: / bulan
     catatan: Ditagih bulanan • Opsi One-Time Rp 79,0jt
     fiturTambahan: Dedicated Account Manager & API Webhook
-    pesanWa: Saya ingin Coba Sekarang paket *Enterprise (Bulanan - Rp 5,99jt/bln)* untuk perusahaan kami.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Enterprise (Bulanan - Rp 5,99jt/bln)* untuk perusahaan kami.
   tahunan:
     harga: Rp 4,79jt
     hargaAngka: 4790000
     satuan: / bulan
     catatan: Ditagih Rp 57,5jt/tahun (Hemat Rp 14,3jt)
     fiturTambahan: Dedicated Account Manager & SLA 99.9%
-    pesanWa: Saya ingin Coba Sekarang paket *Enterprise (Tahunan - Hemat 20%)* untuk perusahaan kami.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Enterprise (Tahunan - Hemat 20%)* untuk perusahaan kami.
   sekaliBayar:
     harga: Rp 79,0jt
     hargaAngka: 79000000

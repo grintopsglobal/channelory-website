@@ -71,7 +71,6 @@ const home = z.object({
   menu: list(anchor),
   header: z.object({ cta: z.string(), ctaMobile: z.string() }),
   hero: z.object({
-    label: z.string(),
     judul: z.string(),
     judulSorot: str,
     paragraf: z.string(),
@@ -82,6 +81,7 @@ const home = z.object({
     adegan: z.array(z.string()).length(3),
     autoPreview: z.string(),
     autoPreviewJeda: z.string(),
+    ilustrasiCatatan: str,
   }),
   manfaat: section,
   fitur: section,

@@ -29,14 +29,14 @@ const f = settings.footer;
       </div>
 
       <div>
-        <h2 class="text-xs font-bold uppercase tracking-wider text-white mb-3">{home.footer.navigasiJudul}</h2>
+        <h2 class="text-sm font-semibold text-white mb-3">{home.footer.navigasiJudul}</h2>
         <ul class="space-y-2 text-xs">
           {home.footer.navigasi.map((n) => <li><a href={href(n.anchor)} class="hover:text-white transition">{n.label}</a></li>)}
         </ul>
       </div>
 
       <div>
-        <h2 class="text-xs font-bold uppercase tracking-wider text-white mb-3">{home.footer.integrasiJudul}</h2>
+        <h2 class="text-sm font-semibold text-white mb-3">{home.footer.integrasiJudul}</h2>
         <ul class="space-y-2 text-xs">
           {home.footer.integrasi.map((i) => <li>{i}</li>)}
           <li class="pt-1">

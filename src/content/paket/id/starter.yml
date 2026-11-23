@@ -10,7 +10,7 @@ fitur:
   - Pelacakan link referral & kupon promo
   - Komisi 1 tingkat (Direct CPA / Margin)
   - Integrasi WooCommerce atau Shopify
-cta: "Coba Sekarang: Starter"
+cta: Tanya Paket Starter
 mode:
   bulanan:
     harga: Rp 990rb
@@ -18,14 +18,14 @@ mode:
     satuan: / bulan
     catatan: Ditagih bulanan • Opsi One-Time Rp 14,9jt
     fiturTambahan: 2 Akun Admin Internal
-    pesanWa: Saya ingin Coba Sekarang paket *Starter (Bulanan - Rp 990rb/bln)* untuk bisnis saya.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Starter (Bulanan - Rp 990rb/bln)* untuk bisnis saya.
   tahunan:
     harga: Rp 792rb
     hargaAngka: 792000
     satuan: / bulan
     catatan: Ditagih Rp 9,5jt/tahun (Hemat Rp 2,37jt)
     fiturTambahan: 2 Akun Admin Internal + Gratis Setup
-    pesanWa: Saya ingin Coba Sekarang paket *Starter (Tahunan - Hemat 20%)* untuk bisnis saya.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Starter (Tahunan - Hemat 20%)* untuk bisnis saya.
   sekaliBayar:
     harga: Rp 14,9jt
     hargaAngka: 14900000

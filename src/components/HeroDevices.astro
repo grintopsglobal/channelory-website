@@ -10,8 +10,9 @@ interface Props {
   adegan: string[];
   autoPreview: string;
   autoPreviewJeda: string;
+  catatan: string;
 }
-const { lang, adegan, autoPreview, autoPreviewJeda } = Astro.props;
+const { lang, adegan, autoPreview, autoPreviewJeda, catatan } = Astro.props;
 const t = useTranslations(lang);
 
 const scenes = [
@@ -57,7 +58,7 @@ const hid = (i: number) => (i === 0 ? undefined : true);
   <div class="relative pb-10 sm:pb-12 pr-2 sm:pr-6" role="img" aria-label={t('hero.devices')}>
     <div aria-hidden="true">
       <!-- Laptop -->
-      <div class="animate-float-mac w-full max-w-[640px] mx-auto lg:mx-0">
+      <div class="w-full max-w-[640px] mx-auto lg:mx-0">
         <div class="bg-ink rounded-t-2xl p-2 sm:p-2.5 border-2 border-slate-700 shadow-2xl relative">
           <div class="w-20 h-2.5 bg-ink rounded-b-md mx-auto -mt-2.5 mb-1.5 flex items-center justify-center relative z-20">
             <span class="w-1.5 h-1.5 rounded-full bg-slate-700 ring-1 ring-slate-600"></span>
@@ -266,7 +267,7 @@ const hid = (i: number) => (i === 0 ? undefined : true);
       </div>
 
       <!-- Ponsel -->
-      <div class="animate-float-android w-[178px] sm:w-[205px] bg-ink rounded-[26px] p-2 border-2 border-slate-700 shadow-2xl absolute -bottom-2 right-0 sm:right-2 z-20 select-none">
+      <div class="w-[178px] sm:w-[205px] bg-ink rounded-[26px] p-2 border-2 border-slate-700 shadow-2xl absolute -bottom-2 right-0 sm:right-2 z-20 select-none">
         <div class="w-0.5 h-6 bg-slate-600 rounded-r absolute -right-[3px] top-16"></div>
         <div class="w-0.5 h-10 bg-slate-600 rounded-r absolute -right-[3px] top-24"></div>
 
@@ -351,6 +352,7 @@ const hid = (i: number) => (i === 0 ? undefined : true);
       </div>
     </div>
   </div>
+  {catatan && <p class="mt-3 text-xs text-slate-500">{catatan}</p>}
 </div>
 
 <script>

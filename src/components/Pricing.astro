@@ -33,28 +33,28 @@ const gaya = {
   standar: {
     card: 'bg-white border border-slate-200', judul: 'text-navy', badge: 'bg-slate-100 text-slate-600 text-[11px] font-bold',
     desk: 'text-slate-500', garis: 'border-slate-100', harga: 'text-navy', satuan: 'text-slate-500', catatan: 'text-slate-500',
-    list: 'text-slate-700', cta: 'bg-slate-100 hover:bg-navy text-navy hover:text-white',
+    list: 'text-slate-700', cek: 'text-navy', cta: 'bg-slate-100 hover:bg-navy text-navy hover:text-white',
   },
   sorot: {
-    card: 'on-dark bg-navy text-white border-2 border-sky shadow-lg relative', judul: 'text-white', badge: 'bg-cta text-cta-ink text-[10px] font-extrabold uppercase tracking-wider',
-    desk: 'text-slate-300', garis: 'border-slate-700', harga: 'text-white', satuan: 'text-slate-300', catatan: 'text-sky-300',
-    list: 'text-slate-200', cta: 'bg-cta hover:bg-cta-hover text-cta-ink shadow-xs',
+    card: 'on-dark bg-navy text-white border-2 border-navy shadow-lg relative', judul: 'text-white', badge: 'bg-white/15 text-white text-[11px] font-bold',
+    desk: 'text-slate-300', garis: 'border-slate-700', harga: 'text-white', satuan: 'text-slate-300', catatan: 'text-slate-300',
+    list: 'text-slate-200', cek: 'text-white', cta: 'bg-cta hover:bg-cta-hover text-cta-ink shadow-xs',
   },
   lembut: {
-    card: 'bg-slate-bg border border-slate-300', judul: 'text-navy', badge: 'bg-sky-100 text-navy text-[10px] font-extrabold uppercase',
+    card: 'bg-slate-bg border border-slate-300', judul: 'text-navy', badge: 'bg-slate-200 text-navy text-[11px] font-bold',
     desk: 'text-slate-600', garis: 'border-slate-200', harga: 'text-navy', satuan: 'text-slate-500', catatan: 'text-slate-500',
-    list: 'text-slate-700', cta: 'bg-navy hover:bg-navy-dark text-white',
+    list: 'text-slate-700', cek: 'text-navy', cta: 'bg-navy hover:bg-navy-dark text-white',
   },
 } as const;
 
 const billBtn = 'px-4 py-2 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer aria-pressed:bg-navy aria-pressed:text-white aria-[pressed=false]:text-slate-600 aria-[pressed=false]:hover:text-navy';
-const catBtn = 'px-3 py-1 rounded-full border transition cursor-pointer aria-pressed:bg-sky-50 aria-pressed:border-sky aria-pressed:text-navy aria-pressed:font-bold aria-[pressed=false]:bg-white aria-[pressed=false]:border-slate-200 aria-[pressed=false]:text-slate-600 aria-[pressed=false]:hover:border-slate-400 aria-[pressed=false]:font-semibold';
+const catBtn = 'px-3 py-1 rounded-full border transition cursor-pointer aria-pressed:bg-white aria-pressed:border-navy aria-pressed:text-navy aria-pressed:font-bold aria-[pressed=false]:bg-white aria-[pressed=false]:border-slate-200 aria-[pressed=false]:text-slate-600 aria-[pressed=false]:hover:border-slate-400 aria-[pressed=false]:font-semibold';
 ---
 
 <section id="harga" class="py-20 bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto">
-      <span class="text-xs font-extrabold uppercase tracking-wider text-sky-text">{teks.eyebrow}</span>
+      <span class="text-sm font-semibold text-slate-600">{teks.eyebrow}</span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-navy tracking-tight mt-2">{teks.judul}</h2>
       <p class="text-sm sm:text-base text-slate-600 mt-3" set:html={inlineMd(teks.paragraf)} />
 
@@ -67,7 +67,7 @@ const catBtn = 'px-3 py-1 rounded-full border transition cursor-pointer aria-pre
           </button>
           <button type="button" data-bill="sekaliBayar" aria-pressed="false" class={billBtn}>
             <span>{teks.filterSekaliBayar}</span>
-            <span class="px-1.5 py-0.5 rounded bg-sky-100 text-navy text-[10px] font-extrabold">{teks.filterSekaliBayarBadge}</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-200 text-navy text-[10px] font-extrabold">{teks.filterSekaliBayarBadge}</span>
           </button>
         </div>
 
@@ -105,7 +105,7 @@ const catBtn = 'px-3 py-1 rounded-full border transition cursor-pointer aria-pre
                 <ul class:list={['mt-6 space-y-3 text-xs', g.list]}>
                   {[...p.fitur, null].map((f) => (
                     <li class="flex items-start gap-2.5">
-                      <Icon name="centang" class="w-4 h-4 text-sky shrink-0 mt-0.5" stroke="2.5" />
+                      <Icon name="centang" class:list={['w-4 h-4 shrink-0 mt-0.5', g.cek]} stroke="2.5" />
                       {f === null ? <span data-f="fiturTambahan">{m.fiturTambahan}</span> : <span set:html={inlineMd(f)} />}
                     </li>
                   ))}

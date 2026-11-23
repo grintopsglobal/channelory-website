@@ -10,7 +10,7 @@ fitur:
   - Aplikasi Mobile Mitra (Android/iOS) opsional
   - Kustomisasi skema komisi, pajak & e-Wallet payout
   - Integrasi ERP / POS internal kustom (SAP, Accurate, dll.)
-cta: "Coba Sekarang: Whitelabel"
+cta: Tanya Paket Whitelabel
 mode:
   bulanan:
     harga: Rp 12,5jt
@@ -18,14 +18,14 @@ mode:
     satuan: / bulan
     catatan: Managed Cloud • Opsi One-Time Mulai Rp 145jt
     fiturTambahan: Dedicated Cloud Instance & Tim Engineer
-    pesanWa: Saya ingin Coba Sekarang paket *Custom Whitelabel (Managed Bulanan)* untuk perusahaan kami.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Custom Whitelabel (Managed Bulanan)* untuk perusahaan kami.
   tahunan:
     harga: Rp 10,0jt
     hargaAngka: 10000000
     satuan: / bulan
     catatan: Ditagih Rp 120jt/tahun (Hemat Rp 30jt)
     fiturTambahan: Dedicated Cloud Instance & Custom Domain Penuh
-    pesanWa: Saya ingin Coba Sekarang paket *Custom Whitelabel (Tahunan - Hemat 20%)* untuk perusahaan kami.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Custom Whitelabel (Tahunan - Hemat 20%)* untuk perusahaan kami.
   sekaliBayar:
     harga: Rp 145jt
     hargaAngka: 145000000

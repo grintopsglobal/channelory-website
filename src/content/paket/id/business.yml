@@ -10,7 +10,7 @@ fitur:
   - Hierarki Agen Multi-Tier (L1–L3 Override)
   - Matriks Harga Grosir, MOQ & Stok Mitra
   - Integrasi Odoo / ERPNext + E-Commerce
-cta: "Coba Sekarang: Business"
+cta: Tanya Paket Business
 mode:
   bulanan:
     harga: Rp 2,49jt
@@ -18,14 +18,14 @@ mode:
     satuan: / bulan
     catatan: Ditagih bulanan • Opsi One-Time Rp 34,9jt
     fiturTambahan: Custom Domain Portal Mitra (partners.brand.id)
-    pesanWa: Saya ingin Coba Sekarang paket *Business (Bulanan - Rp 2,49jt/bln)* untuk bisnis saya.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Business (Bulanan - Rp 2,49jt/bln)* untuk bisnis saya.
   tahunan:
     harga: Rp 1,99jt
     hargaAngka: 1990000
     satuan: / bulan
     catatan: Ditagih Rp 23,9jt/tahun (Hemat Rp 5,97jt)
     fiturTambahan: Custom Domain Portal Mitra + Priority Onboarding
-    pesanWa: Saya ingin Coba Sekarang paket *Business (Tahunan - Hemat 20%)* untuk bisnis saya.
+    pesanWa: Saya ingin tahu lebih lanjut tentang paket *Business (Tahunan - Hemat 20%)* untuk bisnis saya.
   sekaliBayar:
     harga: Rp 34,9jt
     hargaAngka: 34900000
